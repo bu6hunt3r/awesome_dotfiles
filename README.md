@@ -102,3 +102,5 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 - [ ] vboxmanage
 - [ ] zsh theme
 - [ ] copy paste
+- [ ] vimwiki
+- [ ] gdb
