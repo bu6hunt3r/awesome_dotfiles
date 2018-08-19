@@ -96,9 +96,9 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 
 ### Todo
 
-* mutt
-* radare
-* grc
-* vboxmanage
-* zsh theme
-* copy paste
+[ ] mutt
+[ ] radare
+[ ] grc
+[ ] vboxmanage
+[ ] zsh theme
+[ ] copy paste
