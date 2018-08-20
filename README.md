@@ -104,7 +104,7 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 
 ### Todo
 
-- [ ] nvim / vundle / vimtasks
+- [x] nvim / vundle / vimtasks
 - [ ] mutt
 - [ ] radare
 - [ ] grc

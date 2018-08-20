@@ -3,7 +3,7 @@ set nocompatible
 filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
+call vundle#begin()            " required
 
 Plugin 'VundleVim/Vundle.vim'
 

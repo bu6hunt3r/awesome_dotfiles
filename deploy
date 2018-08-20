@@ -101,5 +101,7 @@ printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 echo "Cloning Vundle Plugin Manager to ~/.config/nvim"
 mkdir -p ~/.config/nvim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
+cp ./nvim/init.vim ~/.config/nvim/init.vim
+nvim +PluginInstall
 echo
 echo "Please log out and log back in for default shell to be initialized."
