@@ -71,10 +71,7 @@ SETPALETTELIGHT
 MUTTSOURCE="mutt-colors-solarized-template.muttrc"
 MUTTTARGET="mutt-colors-solarized"
 MUTTSUFFIX=".muttrc"
-rm "$MUTTTARGET-dark-256$MUTTSUFFIX"
 rm "$MUTTTARGET-dark-16$MUTTSUFFIX"
-rm "$MUTTTARGET-light-256$MUTTSUFFIX"
-rm "$MUTTTARGET-light-16$MUTTSUFFIX"
 
 awk 'NR==FNR {a[$1]=$2;next} {for ( i in a) gsub(i,a[i])}1' FS="," \
     palette_dark.tmp $MUTTSOURCE > "$MUTTTARGET-dark-256$MUTTSUFFIX"
@@ -85,5 +82,4 @@ awk 'NR==FNR {a[$1]=$2;next} {for ( i in a) gsub(i,a[i])}1' FS="," \
 awk 'NR==FNR {a[$1]=$3;next} {for ( i in a) gsub(i,a[i])}1' FS="," \
     palette_light.tmp $MUTTSOURCE > "$MUTTTARGET-light-16$MUTTSUFFIX"
 
-rm palette_light.tmp
 rm palette_dark.tmp

@@ -77,9 +77,11 @@ check_for_software tmux
 echo
 check_for_software neovim
 echo
-
+check_for_software msmtp
+echo
+check_for_software mutt
+echo
 check_default_shell
-
 echo
 echo -n "Would you like to backup your current dotfiles? (y/n) "
 old_stty_cfg=$(stty -g)
@@ -115,6 +117,9 @@ if echo "$answer" | grep -iq "^y" ;then
 else
 	echo -e "\nNot installing nvim Plugins."
 fi
+
+# Mutt configuration
+
 
 echo
 echo "Please log out and log back in for default shell to be initialized."
