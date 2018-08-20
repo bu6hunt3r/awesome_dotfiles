@@ -106,11 +106,10 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 
 - [x] nvim / vundle / vimtasks
 - [x] mutt
-- [ ] grc
+- [x] grc
 - [ ] vboxmanage
-- [ ] zsh theme
-- [ ] copy paste
-- [ ] vimwiki
+- [x] copy paste
+- [x] vimwiki
 - [ ] gdb
 - [ ] cheat
 - [ ] dict.cc.py
