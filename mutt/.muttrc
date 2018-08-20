@@ -1,4 +1,3 @@
-source ~/mutt-colors-solarized-dark-16.muttrc
 #Damit bringen wir Mutt unsere Login-Daten für die jeweiligen Accounts bei
 account-hook login@imap.web.de 'set imap_user=bu6hunt3r imap_pass=`python -m keyring get msmtp webde`'
 account-hook login@imap.googlemail.com 'set imap_user=Felix1Koch imap_pass=`python -m keyring get msmtp gmail`'
