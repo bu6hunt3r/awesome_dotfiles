@@ -7,3 +7,6 @@
 [submodule "zsh/plugins/oh-my-zsh"]
 	path = zsh/plugins/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "nvim/bundle/LaTeX-Box"]
+	path = nvim/bundle/LaTeX-Box
+	url = https://github.com/LaTeX-Box-Team/LaTeX-Box.git
