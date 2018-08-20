@@ -229,4 +229,12 @@ else
 fi
 
 echo
+echo "Adding VBoxManage bash completion to zshrc"
+tee -a ~/.zshrc << END
+autoload bashcompinit
+bashcompinit
+source "${HOME}/dotfiles/bash_completions/VBoxManage"
+END
+
+echo
 echo "Please log out and log back in for default shell to be initialized."
