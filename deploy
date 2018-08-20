@@ -98,10 +98,23 @@ printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
 printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 
+# Neovim and various Plugins
+
 echo "Cloning Vundle Plugin Manager to ~/.config/nvim"
 mkdir -p ~/.config/nvim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 cp ./nvim/init.vim ~/.config/nvim/init.vim
-nvim +PluginInstall
+echo
+echo -n "Would you like to install NeoVim Plugins (Vundle) now? (y/n) "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+	nvim +PluginInstall	
+else
+	echo -e "\nNot installing nvim Plugins."
+fi
+
 echo
 echo "Please log out and log back in for default shell to be initialized."
