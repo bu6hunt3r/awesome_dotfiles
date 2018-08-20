@@ -75,6 +75,8 @@ check_for_software vim
 echo
 check_for_software tmux
 echo
+check_for_software neovim
+echo
 
 check_default_shell
 
@@ -96,5 +98,7 @@ printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
 printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 
+echo "Copy neovim's init settings to ~/.config/nvim"
+cp -R ~/dotfiles/nvim ~/.config
 echo
 echo "Please log out and log back in for default shell to be initialized."
