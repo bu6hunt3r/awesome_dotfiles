@@ -105,8 +105,7 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 ### Todo
 
 - [x] nvim / vundle / vimtasks
-- [ ] mutt
-- [ ] radare
+- [x] mutt
 - [ ] grc
 - [ ] vboxmanage
 - [ ] zsh theme
