@@ -1,4 +1,4 @@
-source ~/pwndbg/gdbinit.py
+source ~/peda/peda.py
 
 def init-pwngdb
         source ~/peda/peda.py
@@ -6,13 +6,12 @@ def init-pwngdb
         source ~/Pwngdb/angelheap/gdbinit.py
         
         define hook-run
-        python
-        import angelheap
-        angelheap.init_angelheap()
-        end
-        end
+         	python
+        	import angelheap
+        	angelheap.init_angelheap()
+       	end
 end
 
 def init-pwndbg
-        source ~/pwndbg/gdbinit.py
+	source ~/pwndbg/gdbinit.py
 end
