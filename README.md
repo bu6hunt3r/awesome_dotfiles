@@ -115,3 +115,7 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 - [ ] gdb
 - [ ] cheat
 - [ ] dict.cc.py
+- [ ] vim-python-jedi / jedi
+- [ ] radare2 / incl. plugins r2wiki, r2angr, etc.
+- [ ] pwntools
+

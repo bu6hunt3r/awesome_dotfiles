@@ -119,7 +119,17 @@ else
 fi
 
 # Mutt configuration
-
+echo "Setting msmtp/IMAP passwords within python keyring for webde"
+python -m keyring set msmtp webde
+echo "Setting msmtp/IMAP passwords within python keyring for google"
+python -m keyring set msmtp gmail
+./mutt/mutt-compile-colors.sh
+echo "Copying mutt config files to HOME dir and changing perms"
+cp -R ./mutt/.muttrc ./mutt/.mutt "${HOME}"
+chmod -R 700 "${HOME}"/.mutt 
+chmod 700 "${HOME}"/.muttrc
+echo "Setting mutt colors"
+sed -i -e  "1s;^;source ${PWD}/mutt-colors-solarized-dark-16.muttrc\n;"
 
 echo
 echo "Please log out and log back in for default shell to be initialized."
