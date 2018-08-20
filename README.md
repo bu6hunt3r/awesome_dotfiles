@@ -88,12 +88,19 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 
 ## [Tmux](https://en.wikipedia.org/wiki/Tmux)
 
+* Copy mode settings have been adopted from [[https://github.com/gotbletu/shownotes/blob/master/tmux_2.4_copy_mode_vim.md]]
+
 * Ctrl-B has been remapped to Ctrl-A
-* `%` has been remapped to `v`.
 * Use vim movement keys for moving between panes. 
 * Copy buffer is coppied to xclip.
 * Status bar tells you date, time, user, and hostname. Especially useful with nested ssh sessions.
-* To copy in tmux press Ctrl-a + [ and subesquently <Spacebar> to select and Ctrl-c to copy to clipboard and Ctrl-v to paste
+* To Copy hit:
+	1.  Bind-key + Esc
+	2.  Go to location to copy from with vim's hjkl keys
+	3.  Hit v to mark text, and resize selection with hjkl
+	4.  Hit y to copy to buffer and Enter to terminate copy mode
+	5. Bind-Key + p pastes from clipboard
+	6. From now on, in any other application you can use Ctrl+v
 
 ### Todo
 
