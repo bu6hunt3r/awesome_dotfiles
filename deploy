@@ -83,6 +83,8 @@ check_for_software mutt
 echo
 check_for_software grc 
 echo
+check_for_software gdb
+echo
 check_default_shell
 echo
 echo -n "Would you like to backup your current dotfiles? (y/n) "
@@ -162,6 +164,36 @@ if echo "$answer" | grep -iq "^y" ;then
 	echo "Now source aliases.zsh within that repo in zshrc"
 else
 	echo "Not updating anything regarding grc config"
+fi
+
+#Radare2 / rc-file
+echo "If you have already radare2 installed you have the option to install plugins now"
+echo -n "Would you like to install r2 plugins now? (y/n) "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+	r2pm init 
+	r2pm update
+	r2pm -i r2wiki
+else
+	echo "Nothing changed regarding r2 rc-file"
+fi
+
+#GDB / init-file
+echo -n "Would you like to install gdb and python addons now? (y/n) "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+	git clone https://github.com/longld/peda.git ~/peda
+	git clone https://github.com/scwuaptx/Pwngdb.git ~/Pwngdb
+	git clone https://github.com/pwndbg/pwndbg.git ~/pwndbg
+	cp ./gdb/.gdbinit ~/.gdbinit
+else
+	echo "Nothing changed regarding gdb addons"
 fi
 echo
 echo "Please log out and log back in for default shell to be initialized."
