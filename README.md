@@ -104,6 +104,7 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 
 ### Todo
 
+- [ ] nvim
 - [ ] mutt
 - [ ] radare
 - [ ] grc
@@ -113,4 +114,4 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 - [ ] vimwiki
 - [ ] gdb
 - [ ] cheat
-
+- [ ] dict.cc.py
