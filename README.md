@@ -110,10 +110,18 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 - [ ] vboxmanage
 - [x] copy paste
 - [x] vimwiki
-- [ ] gdb
-- [ ] cheat
-- [ ] dict.cc.py
-- [ ] vim-python-jedi / jedi
-- [ ] radare2 / incl. plugins r2wiki, r2angr, etc.
+- [x] gdb
+- [x] cheat
+- [x] dict.cc.py
 - [ ] pwntools
 
+* Globally install
+	- r2 plugins
+	- pwntools
+	- ipython / python jedi / vim python jedi
+	- binary ninja
+	- vscode
+	- gimp
+	- audacity
+	- virtualbox
+	- burpsuite

@@ -105,7 +105,7 @@ printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 
 # Neovim and various Plugins
-
+echo
 echo "Cloning Vundle Plugin Manager to ~/.config/nvim"
 mkdir -p ~/.config/nvim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
@@ -123,6 +123,7 @@ else
 fi
 
 # Mutt configuration
+echo
 echo -n "Would you like to set reset SMTP/IMAP passwords for mail accounts now? (y/n) "
 old_stty_cfg=$(stty -g)
 stty raw -echo
@@ -145,10 +146,10 @@ cp -R ./mutt/.muttrc ./mutt/.mutt "${HOME}"
 chmod -R 700 "${HOME}"/.mutt 
 chmod 700 "${HOME}"/.muttrc
 echo "Setting mutt colors"
-echo "In DIR ${PWD}"
 sed -i -e  "1s;^;source ${HOME}/dotfiles/mutt/mutt-colors-solarized-dark-16.muttrc\n;" ~/.muttrc
 
 # grc / alias configuration
+echo
 echo -n "Would you like to reinstall grc aliases now? (y/n) "
 old_stty_cfg=$(stty -g)
 stty raw -echo
@@ -167,6 +168,7 @@ else
 fi
 
 #Radare2 / rc-file
+echo
 echo "If you have already radare2 installed you have the option to install plugins now"
 echo -n "Would you like to install r2 plugins now? (y/n) "
 old_stty_cfg=$(stty -g)
@@ -182,6 +184,7 @@ else
 fi
 
 #GDB / init-file
+echo
 echo -n "Would you like to install gdb and python addons now? (y/n) "
 old_stty_cfg=$(stty -g)
 stty raw -echo
@@ -195,5 +198,35 @@ if echo "$answer" | grep -iq "^y" ;then
 else
 	echo "Nothing changed regarding gdb addons"
 fi
+
+#installing cheats
+echo
+echo -n "Would you like to install cli cheats? (y/n) "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+	git clone --single-branch -b devel https://github.com/bu6hunt3r/cheat.git ~/cheat	
+	cd ~/cheat
+	sudo -H python setup.py install
+	cd "${HOME}/dotfiles"
+else
+	echo "Nothing changed regarding cheats"
+fi
+
+#Installing dict.cc.py
+echo
+echo -n "Would you like to install dict.cc.py? (y/n) "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+	sudo -H pip install dict.cc.py
+else
+	echo "Nothing changed regarding dict.cc.py"
+fi
+
 echo
 echo "Please log out and log back in for default shell to be initialized."
