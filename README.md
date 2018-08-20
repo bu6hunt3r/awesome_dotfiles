@@ -88,7 +88,7 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 
 ## [Tmux](https://en.wikipedia.org/wiki/Tmux)
 
-* Copy mode settings have been adopted from [[https://github.com/gotbletu/shownotes/blob/master/tmux_2.4_copy_mode_vim.md]]
+* Copy mode settings have been adopted from [https://github.com/gotbletu/shownotes/blob/master/tmux_2.4_copy_mode_vim.md]
 
 * Ctrl-B has been remapped to Ctrl-A
 * Use vim movement keys for moving between panes. 
