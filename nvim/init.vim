@@ -124,5 +124,6 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tomtom/trag_vim'
 Plugin 'tomtom/vikitasks_vim'
+Plugin 'codegram/vim-todo'
 
 colorscheme industry
