@@ -96,6 +96,7 @@ if echo "$answer" | grep -iq "^y" ;then
 	mv ~/.zshrc ~/.zshrc.old
 	mv ~/.tmux.conf ~/.tmux.conf.old
 	mv ~/.vimrc ~/.vimrc.old
+	mv ~/.msmtprc ~/.msmtprc.old
 else
 	echo -e "\nNot backing up old dotfiles."
 fi
@@ -120,6 +121,34 @@ if echo "$answer" | grep -iq "^y" ;then
 	nvim +PluginInstall	
 else
 	echo -e "\nNot installing nvim Plugins."
+fi
+
+# Goobook installation
+echo
+echo -n "Would you like to install goobook now? (y/n) "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+	sudo -H pip install goobook
+	goobook authenticate
+else
+	echo -e "\nNot changing anything regarding goobook."
+fi
+
+# MSMTP configuration
+echo
+echo -n "Would you like to roll-out msmtprc file now? (y/n) "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+	echo "Copying msmtprc for gmail/webde"
+	cp "${HOME}/dotfiles/msmtp/.msmtprc" "${HOME}"
+else
+	echo -e "\nNot changing anything regarding msmtp configuration."
 fi
 
 # Mutt configuration

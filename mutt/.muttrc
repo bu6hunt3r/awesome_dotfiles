@@ -1,3 +1,4 @@
+source /home/cr0c0/dotfiles/mutt/mutt-colors-solarized-dark-16.muttrc
 #Damit bringen wir Mutt unsere Login-Daten für die jeweiligen Accounts bei
 account-hook login@imap.web.de 'set imap_user=bu6hunt3r imap_pass=`python -m keyring get msmtp webde`'
 account-hook login@imap.googlemail.com 'set imap_user=Felix1Koch imap_pass=`python -m keyring get msmtp gmail`'
@@ -35,3 +36,9 @@ set folder_format="%2C %8s %d %t %N %f"     #Format des Datei-Browsers
 set pager_index_lines=10                    #Anzahl der angezeigten Mails in der Übersicht
 #Editor, der zum Verfassen der E-Mail benutzt wird, hier Vim beginnend im Einfügemodus auf der ersten Leerzeile und Zeilenumbruch bei 70 Zeichen
 set editor="vim -c 'startinsert' -c 'set tw=70 et' -c 'set wrap' '+/^$'" 
+
+#Google address book
+set query_command="goobook query %s"
+macro index,pager a "<pipe-message>goobook add<return>" "add sender to google contacts"
+bind editor <Tab> complete-query
+
