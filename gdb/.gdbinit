@@ -15,3 +15,7 @@ end
 def init-pwndbg
 	source ~/pwndbg/gdbinit.py
 end
+
+def init-gef
+	source ~/.gdbinit-gef.py
+end

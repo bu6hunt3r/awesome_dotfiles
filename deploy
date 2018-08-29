@@ -224,6 +224,7 @@ if echo "$answer" | grep -iq "^y" ;then
 	git clone https://github.com/longld/peda.git ~/peda
 	git clone https://github.com/scwuaptx/Pwngdb.git ~/Pwngdb
 	git clone https://github.com/pwndbg/pwndbg.git ~/pwndbg
+	wget -O ~/.gdbinit-gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
 	cp ./gdb/.gdbinit ~/.gdbinit
 else
 	echo "Nothing changed regarding gdb addons"
