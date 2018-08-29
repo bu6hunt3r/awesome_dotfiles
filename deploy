@@ -191,6 +191,7 @@ if echo "$answer" | grep -iq "^y" ;then
 	sudo cp "${PWD}/grc/configs/conf.*" /usr/share/grc/
 	echo "Setting up aliases"
 	cp "${PWD}/grc/.aliases.zsh" "${HOME}"
+    echo "source ${HOME}/.aliases.zsh" >> ~/.zshrc
 	echo "Now source aliases.zsh within that repo in zshrc"
 else
 	echo "Not updating anything regarding grc config"

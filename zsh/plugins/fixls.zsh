@@ -20,7 +20,7 @@ if [[ "$DISABLE_LS_COLORS" != "true" ]]; then
 	# will be installed on purpose and can't be pulled in by installing
 	# coreutils, so prefer it to "gls".
 	gls --color -d . &>/dev/null && alias ls='gls --color=tty'
-	colorls -G -d . &>/dev/null && alias ls='colorls -G'
+x	colorls -G -d . &>/dev/null && alias ls='colorls -G'
   elif [[ "$OSTYPE" == darwin* ]]; then
 	# this is a good alias, it works by default just using $LSCOLORS
 	ls -G . &>/dev/null && alias ls='ls -G'
