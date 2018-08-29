@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 # bash command-line completion for VBoxManage command
 #
 # Author: Roman 'gryf' Dobosz <gryf73@gmail.com>
