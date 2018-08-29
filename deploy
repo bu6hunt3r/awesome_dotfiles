@@ -259,7 +259,7 @@ fi
 
 echo
 echo "Adding VBoxManage bash completion to zshrc"
-sed -i -e '$s;^;autoload bashcompinit\nbashcompinit\nsource "${HOME}/dotfiles/bash_completions/VBoxManage\n";' ~/.zshrc
+sed -i -e '$s;^;autoload bashcompinit\nbashcompinit\nsource "${HOME}/dotfiles/bash_completions/VBoxManage"\n;' ~/.zshrc
 
 echo
 echo "Please log out and log back in for default shell to be initialized."
