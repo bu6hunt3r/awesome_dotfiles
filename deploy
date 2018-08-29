@@ -261,7 +261,8 @@ fi
 
 echo
 echo "Adding VBoxManage bash completion to zshrc"
-sed -i -e '$s;^;autoload bashcompinit\nbashcompinit\nsource "${HOME}/dotfiles/bash_completions/VBoxManage"\n;' ~/.zshrc
+mkdir "${HOME}/dotfiles/zsh/plugins/oh-my-zsh/plugins/virtualbox"
+wget -O "${HOME}/dotfiles/zsh/plugins/oh-my-zsh/plugins/virtualbox/_virtualbox" https://raw.githubusercontent.com/benclark/oh-my-zsh-plugins/master/virtualbox/_virtualbox
+echo "Now source ${HOME}/dotfiles/zsh/zshrc.sh within plugin enumeration" 
 
-echo
 echo "Please log out and log back in for default shell to be initialized."
