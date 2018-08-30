@@ -75,6 +75,8 @@ check_for_software vim
 echo
 check_for_software tmux
 echo
+check_for_software xclip
+echo
 check_for_software neovim
 echo
 check_for_software msmtp
@@ -104,6 +106,14 @@ fi
 printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
 printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
+
+
+# Tmux fingers
+echo "Installing tmux-fingers"
+git clone --recursive https://github.com/Morantron/tmux-fingers ~/.tmux/plugins/tmux-fingers
+echo "run-shell ~/.tmux/plugins/tmux-fingers/tmux-fingers.tmux" >> ~/.tmux.conf
+echo "set -g @fingers-key F" >> "${HOME}/dotfiles/tmux/tmux.conf"
+echo "set -g @fingers-pattern-0 '0x([0-9a-f]+)'" >> "${HOME}/dotfiles/tmux/tmux.conf"
 
 # Neovim and various Plugins
 echo
