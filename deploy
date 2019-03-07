@@ -101,8 +101,6 @@ fi
 
 echo "Deploying zshrc"
 printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
-echo "Deploying vimrc"
-printf "source '$HOME/dotfiles/vim/vimrc.vim'" > ~/.vimrc
 echo "Deploying tmux config"
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 
