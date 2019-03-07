@@ -52,7 +52,7 @@ autoload -U compinit
 
 plugins=(
 	docker
-	virtualbox
+	vagrant
 )
 
 for plugin ($plugins); do
@@ -85,3 +85,6 @@ fi
 
 source ~/dotfiles/zsh/prompt.sh
 export PATH=$PATH:$HOME/dotfiles/utils
+
+fpath=(/home/cr0c0/dotfiles/zsh/plugins/oh-my-zsh/plugins/zsh-completions/src $fpath)
+rm -f ~/.zcompdump; compinit

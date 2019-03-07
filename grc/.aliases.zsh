@@ -1,4 +1,3 @@
-alias vim="nvim"
 alias irclog="grc irclog"
 alias log="grc log"
 alias configure="grc configure"

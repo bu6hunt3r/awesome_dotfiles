@@ -79,10 +79,6 @@ check_for_software xclip
 echo
 check_for_software neovim
 echo
-check_for_software msmtp
-echo
-check_for_software mutt
-echo
 check_for_software grc 
 echo
 check_for_software gdb
@@ -103,8 +99,11 @@ else
 	echo -e "\nNot backing up old dotfiles."
 fi
 
+echo "Deploying zshrc"
 printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
-printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
+echo "Deploying vimrc"
+printf "source '$HOME/dotfiles/vim/vimrc.vim'" > ~/.vimrc
+echo "Deploying tmux config"
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 
 
@@ -117,75 +116,76 @@ echo "set -g @fingers-pattern-0 '0x([0-9a-f]+)'" >> "${HOME}/dotfiles/tmux/tmux.
 
 # Neovim and various Plugins
 echo
-echo "Cloning Vundle Plugin Manager to ~/.config/nvim"
-mkdir -p ~/.config/nvim/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
-cp ./nvim/init.vim ~/.config/nvim/init.vim
+echo "Cloning Vundle Plugin Manager to ~/.vim"
+mkdir -p ~/.vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+echo "Deploying vimrc"
+cp ./vim/vimrc.vim ~/.vimrc
 echo
-echo -n "Would you like to install NeoVim Plugins (Vundle) now? (y/n) "
+echo -n "Would you like to install Vim Plugins (Vundle) now? (y/n) "
 old_stty_cfg=$(stty -g)
 stty raw -echo
 answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
 stty $old_stty_cfg
 if echo "$answer" | grep -iq "^y" ;then
-	nvim +PluginInstall	
+	vim +PluginInstall	
 else
-	echo -e "\nNot installing nvim Plugins."
+	echo -e "\nNot installing vim Plugins."
 fi
 
 # Goobook installation
-echo
-echo -n "Would you like to install goobook now? (y/n) "
-old_stty_cfg=$(stty -g)
-stty raw -echo
-answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
-stty $old_stty_cfg
-if echo "$answer" | grep -iq "^y" ;then
-	sudo -H pip install goobook
-	goobook authenticate
-else
-	echo -e "\nNot changing anything regarding goobook."
-fi
+#echo
+#echo -n "Would you like to install goobook now? (y/n) "
+#old_stty_cfg=$(stty -g)
+#stty raw -echo
+#answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+#stty $old_stty_cfg
+#if echo "$answer" | grep -iq "^y" ;then
+#	sudo -H pip install goobook
+#	goobook authenticate
+#else
+#	echo -e "\nNot changing anything regarding goobook."
+#fi
 
 # MSMTP configuration
-echo
-echo -n "Would you like to roll-out msmtprc file now? (y/n) "
-old_stty_cfg=$(stty -g)
-stty raw -echo
-answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
-stty $old_stty_cfg
-if echo "$answer" | grep -iq "^y" ;then
-	echo "Copying msmtprc for gmail/webde"
-	cp "${HOME}/dotfiles/msmtp/.msmtprc" "${HOME}"
-else
-	echo -e "\nNot changing anything regarding msmtp configuration."
-fi
+#echo
+#echo -n "Would you like to roll-out msmtprc file now? (y/n) "
+#old_stty_cfg=$(stty -g)
+#stty raw -echo
+#answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+#stty $old_stty_cfg
+#if echo "$answer" | grep -iq "^y" ;then
+#	echo "Copying msmtprc for gmail/webde"
+#	cp "${HOME}/dotfiles/msmtp/.msmtprc" "${HOME}"
+#else
+#	echo -e "\nNot changing anything regarding msmtp configuration."
+#fi
 
 # Mutt configuration
-echo
-echo -n "Would you like to set reset SMTP/IMAP passwords for mail accounts now? (y/n) "
-old_stty_cfg=$(stty -g)
-stty raw -echo
-answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
-stty $old_stty_cfg
-if echo "$answer" | grep -iq "^y" ;then
-	echo "Setting msmtp/IMAP passwords within python keyring for webde"
-	python -m keyring set msmtp webde
-	echo "Setting msmtp/IMAP passwords within python keyring for google"
-	python -m keyring set msmtp gmail	
-else
-	echo -e "\nNot changing anything regarding mail passwords."
-fi
+#echo
+#echo -n "Would you like to set reset SMTP/IMAP passwords for mail accounts now? (y/n) "
+#old_stty_cfg=$(stty -g)
+#stty raw -echo
+#answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+#stty $old_stty_cfg
+#if echo "$answer" | grep -iq "^y" ;then
+#	echo "Setting msmtp/IMAP passwords within python keyring for webde"
+#	python -m keyring set msmtp webde
+#	echo "Setting msmtp/IMAP passwords within python keyring for google"
+#	python -m keyring set msmtp gmail	
+#else
+#	echo -e "\nNot changing anything regarding mail passwords."
+#fi
 
-cd ./mutt
-./mutt-compile-colors.sh
-cd ..
-echo "Copying mutt config files to HOME dir and changing perms"
-cp -R ./mutt/.muttrc ./mutt/.mutt "${HOME}"
-chmod -R 700 "${HOME}"/.mutt 
-chmod 700 "${HOME}"/.muttrc
-echo "Setting mutt colors"
-sed -i -e  "1s;^;source ${HOME}/dotfiles/mutt/mutt-colors-solarized-dark-16.muttrc\n;" ~/.muttrc
+#cd ./mutt
+#./mutt-compile-colors.sh
+#cd ..
+#echo "Copying mutt config files to HOME dir and changing perms"
+#cp -R ./mutt/.muttrc ./mutt/.mutt "${HOME}"
+#chmod -R 700 "${HOME}"/.mutt 
+#chmod 700 "${HOME}"/.muttrc
+#echo "Setting mutt colors"
+#sed -i -e  "1s;^;source ${HOME}/dotfiles/mutt/mutt-colors-solarized-dark-16.muttrc\n;" ~/.muttrc
 
 # grc / alias configuration
 echo
@@ -254,6 +254,20 @@ if echo "$answer" | grep -iq "^y" ;then
 	cd "${HOME}/dotfiles"
 else
 	echo "Nothing changed regarding cheats"
+fi
+
+#Installing my vimwiki
+echo
+echo -n "Would you like to roll-out personal vimwiki? (y/n) "
+old_stty_cfg=$(stty -g)
+stty raw -echo
+answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
+stty $old_stty_cfg
+if echo "$answer" | grep -iq "^y" ;then
+    echo "Cloning viki to ~/viki"
+    git clone https://github.com/bu6hunt3r/viki.git ~/viki
+else
+	echo "Nothing changed regarding personal vimwiki"
 fi
 
 #Installing dict.cc.py
