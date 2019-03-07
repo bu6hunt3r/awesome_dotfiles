@@ -8,7 +8,7 @@
 "                                                                              "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
-let $vimhome=fnamemodify(resolve(expand("~/.vimrc")), ':p:h')
+let $vimhome="~/.vim"
 let $vundle=$vimhome."/bundle/Vundle.vim"
 
 " Be iMproved
