@@ -102,7 +102,7 @@ fi
 echo "Deploying zshrc"
 printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
 echo "Deploying tmux config"
-printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
+printf "source-file $HOME/dotfiles/tmux/tmux.conf\n" > ~/.tmux.conf
 
 
 # Tmux fingers
