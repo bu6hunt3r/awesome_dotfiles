@@ -9,6 +9,10 @@ set_prompt() {
 	# [
 	PS1="%{$fg[white]%}[%{$reset_color%}"
 
+    if [[ $VIRTUAL_ENV != "" ]]; then
+        PS1+="%{$fg[red]%}(${VIRTUAL_ENV##*/})%{$reset_color%}"
+    fi
+
 	# Path: http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 	PS1+="%{$fg_bold[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
 

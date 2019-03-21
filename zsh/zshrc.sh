@@ -88,3 +88,9 @@ export PATH=$PATH:$HOME/dotfiles/utils
 
 fpath=(/home/cr0c0/dotfiles/zsh/plugins/oh-my-zsh/plugins/zsh-completions/src $fpath)
 rm -f ~/.zcompdump; compinit
+
+# Jumping with ctrl+arrows
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+bindkey "^K" kill-whole-line
