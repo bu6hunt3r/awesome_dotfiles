@@ -53,6 +53,7 @@ autoload -U compinit
 plugins=(
 	docker
 	virtualbox
+	vagrant
 )
 
 for plugin ($plugins); do
