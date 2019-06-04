@@ -1,10 +1,12 @@
 * Awesome Dotfiles
 
 ** General
-*** `boot/guard.zsh`
+*** boot/guard.zsh
 checking if readlink command is present; aborting if not
 
-*** boot/functions.zsh`
+*** boot/functions.zsh
+**** verifylink 
+Check if it's a regular file or symlink / aborting if regular
 
 ** ZSH
 *** zsh parameters
