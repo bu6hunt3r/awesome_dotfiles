@@ -1,8 +1,8 @@
-# Awesome Dotfiles
+* Awesome Dotfiles
 
-* ZSH
-** zsh parameters
-*** terminal colors
+** ZSH
+*** zsh parameters
+**** terminal colors
 - TC
 - Rst
 - Black
