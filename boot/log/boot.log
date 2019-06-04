@@ -1,2 +1,4 @@
-/home/cr0c0/Desktop/awesome_dotfiles/zsh/termcolors.zsh:source:8: datei oder Verzeichnis nicht gefunden: /home/cr0c0/Desktop/awesome_dotfiles/zsh/termcolors.zsh
-/home/cr0c0/Desktop/awesome_dotfiles/zsh/constants.zsh:source:11: datei oder Verzeichnis nicht gefunden: /home/cr0c0/Desktop/awesome_dotfiles/zsh/constants.zsh
+[1;33m[STATUS - /home/cr0c0/Desktop/awesome_dotfiles/zsh/termcolors.zsh][m Loaded termcolors...
+[1;33m[STATUS - /home/cr0c0/Desktop/awesome_dotfiles/zsh/constants.zsh][m Loaded constants: zsh_deps emacs_deps vim_deps other_deps 
+[1;33m[STATUS - /home/cr0c0/Desktop/awesome_dotfiles/boot/guard.zsh][0m readlink command found. continuing
+ARG 

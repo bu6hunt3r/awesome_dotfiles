@@ -10,3 +10,5 @@ Blue="${TC}34m";
 Purple="${TC}35m";
 Cyan="${TC}36m";
 White="${TC}37m";
+
+printf "\e[1;33m%s\e[m %s\n" "[STATUS - $0]" "Loaded termcolors..."

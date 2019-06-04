@@ -1,5 +1,11 @@
 * Awesome Dotfiles
 
+** General
+*** `boot/guard.zsh`
+checking if readlink command is present; aborting if not
+
+*** boot/functions.zsh`
+
 ** ZSH
 *** zsh parameters
 **** terminal colors
@@ -21,3 +27,5 @@ Constants will be defined in ~/.options/shell-options.zsh
 - emacs_deps
 - vim_deps
 - other_deps
+
+ 
