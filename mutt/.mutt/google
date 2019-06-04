@@ -1,8 +1,0 @@
-set from=Felix1Koch@googlemail.com
-set hostname=googlemail.com
-set imap_login="Felix1Koch"
-set imap_pass=`python -m keyring get msmtp gmail`
-set folder="imaps://Felix1Koch@imap.googlemail.com/"
-set postponed="=[Google Mail]/Entwürfe"
-set record="=[Google Mail]/Gesendet"
-set spoolfile="=INBOX"
