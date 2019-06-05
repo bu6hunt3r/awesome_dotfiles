@@ -2,7 +2,7 @@
 
 ** General
 
-Link #+BEGIN_SRC shell ~/.dotfiles #+END_SRC
+Link =~/.dotfiles= points to freshly cloned git repo =awesome_dotfiles=
 
 *** boot/guard.zsh
 checking if readlink command is present; aborting if not
