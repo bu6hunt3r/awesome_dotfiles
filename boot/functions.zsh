@@ -31,7 +31,7 @@ build_git_url() {
     if [[ -n ${GITMASK+X} ]]; then
         gitservermask=$GITMASK
     fi
-    local url=${gitservermask}${name}.github
+    local url=${gitservermask}${name}.git
     echo $url
 }
 
