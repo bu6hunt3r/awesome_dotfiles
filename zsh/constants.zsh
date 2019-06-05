@@ -8,7 +8,7 @@ other_deps=~/.dotfiles/deps/other
 
 const_keys=(zsh_deps emacs_deps vim_deps other_deps)
 
-printf "\e[1;33m%s\e[m %s" "[STATUS - $0]" "Loaded constants: "
+#printf "\e[1;33m%s\e[m %s" "[STATUS - $0]" "Loaded constants: "
 for i in ${const_keys[@]}; do
     echo -n "$i ";
 done
