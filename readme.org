@@ -5,23 +5,29 @@
 - Link =~/.dotfiles= points to freshly cloned git repo =awesome_dotfiles=
 - Dependencies get cloned into =awesome_dotfiles/deps/=
 
-*** boot/guard.zsh
+*** =boot/guard.zsh=
 checking if readlink command is present; aborting if not
 
-*** boot/functions.zsh
-**** verifylink 
+*** =boot/functions.zsh=
+**** =verifylink=
 Check if it's a regular file or symlink / aborting if regular
-**** build_git_url 
+**** =build_git_url= 
 Build git url based on repos name and return url
-**** git_clone_error_msg
+**** =git_clone_error_msg=
 Return error message based on clone's return status
-**** dotgrab
+**** =dotgrab=
 Fetch/update dependencies for included git repos
 
-*** boot/symlinks.zsh
+*** =boot/symlinks.zsh=
 Verify and/or update links ~/.dotfiles, which should point to repos.
 
-*** 
+*** =boot/*-deps=
+Grab external dependencies for:
+- zsh
+- emacs
+- vim
+- other
+
 
 ** ZSH
 *** zsh parameters
@@ -38,7 +44,7 @@ Verify and/or update links ~/.dotfiles, which should point to repos.
 - White
 
 **** constants
-Constants will be defined in ~/.options/shell-options.zsh
+Constants will be defined in =~/.options/shell-options.zsh=
 
 - zsh_deps
 - emacs_deps
