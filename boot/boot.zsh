@@ -20,4 +20,7 @@ source $GIT_ROOT/boot/functions.zsh $1
 # Checking symlinks for repos within ~/.dotfiles
 source $GIT_ROOT/boot/symlinks.zsh
 
-source ~/.options/shell-options.zsh gitmask
+source $GIT_ROOT/boot/zsh-deps.zsh
+#source $GIT_ROOT/boot/vim-deps.zsh
+#source $GIT_ROOT/boot/emacs-deps.zsh
+#source $GIT_ROOT/boot/other-deps.zsh
