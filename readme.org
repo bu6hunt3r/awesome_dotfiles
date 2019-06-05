@@ -2,7 +2,8 @@
 
 ** General
 
-Link =~/.dotfiles= points to freshly cloned git repo =awesome_dotfiles=
+- Link =~/.dotfiles= points to freshly cloned git repo =awesome_dotfiles=
+- Dependencies get cloned into =awesome_dotfiles/deps/=
 
 *** boot/guard.zsh
 checking if readlink command is present; aborting if not
