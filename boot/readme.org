@@ -1,6 +1,4 @@
 #+TITLE: Boot strategy
-#+TOC: Bla
-* Boot strategy
 - this is where boot process strategy programs get maintained
 
 * Options
