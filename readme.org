@@ -2,6 +2,8 @@
 
 ** General
 
+Link #+BEGIN_SRC shell ~/.dotfiles #+END_SRC
+
 *** boot/guard.zsh
 checking if readlink command is present; aborting if not
 
