@@ -7,6 +7,13 @@ checking if readlink command is present; aborting if not
 *** boot/functions.zsh
 **** verifylink 
 Check if it's a regular file or symlink / aborting if regular
+**** build_git_url 
+Build git url based on repos name and return url
+**** git_clone_error_msg
+Return error message based on clone's return status
+**** dotgrab
+Fetch/update dependencies for included git repos
+
 
 ** ZSH
 *** zsh parameters

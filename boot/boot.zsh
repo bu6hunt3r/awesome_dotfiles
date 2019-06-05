@@ -14,4 +14,7 @@ source $GIT_ROOT/zsh/constants.zsh
 # checking if readlink command is present; aborting if not
 source $GIT_ROOT/boot/guard.zsh
 
+
 source $GIT_ROOT/boot/functions.zsh $1
+
+
