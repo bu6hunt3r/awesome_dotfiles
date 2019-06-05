@@ -1,6 +1,7 @@
 * Awesome Dotfiles
 
 ** General
+
 *** boot/guard.zsh
 checking if readlink command is present; aborting if not
 
@@ -14,6 +15,8 @@ Return error message based on clone's return status
 **** dotgrab
 Fetch/update dependencies for included git repos
 
+*** boot/symlinks.zsh
+Verify and/or update links ~/.dotfiles, which should point to repos.
 
 ** ZSH
 *** zsh parameters
