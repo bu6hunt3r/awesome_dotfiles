@@ -18,6 +18,8 @@ Fetch/update dependencies for included git repos
 *** boot/symlinks.zsh
 Verify and/or update links ~/.dotfiles, which should point to repos.
 
+*** 
+
 ** ZSH
 *** zsh parameters
 **** terminal colors
