@@ -6,6 +6,6 @@ for file in ./**/deploy.zsh; do
 done
 
 verifylink ~/.dotfiles
-updatelink ~/.dotfiles .
+updatelinks ~/.dotfiles .
 
 echo "\033[1;33m[STATUS - $0]\033[0m Checked/Updated symlinks within ${HOME}/dotfiles."
