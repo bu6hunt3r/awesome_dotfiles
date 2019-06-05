@@ -14,6 +14,3 @@ urlhash[foo/bar]=https://foo.com/cgit/baz.git
 #+END_SRC
 
 - done.
-
-* TODO Bla [2019-6-7 Fri]
-* TODO another bla
