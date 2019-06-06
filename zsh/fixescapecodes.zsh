@@ -75,4 +75,4 @@ bindkey -s '^ ' ' git status --short^M'
 
 # Execute the current suggestion (using zsh-autosuggestions)
 # Alt+Enter = '^[^M' on recent VTE and '^[^J' for older (Lxterminal)
-bindkey '^[^[' autosuggest-execute
+bindkey '^[^M' autosuggest-execute
