@@ -21,3 +21,8 @@ Don't forget to specify your prompt setting within
 DOT_PROMPT_CHAR="λ"
 SHELL_PROMPT_INFO_LEVEL="0"
 #+END_SRC
+* fzf
+If "~/.fzf" is present, fuzzy command line finder can be used.
+#+BEGIN_SRC 
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+#+END_SRC

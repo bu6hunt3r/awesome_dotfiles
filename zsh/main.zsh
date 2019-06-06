@@ -34,7 +34,7 @@ load_plugins
 source ~/.zsh.d/completions.zsh
 
 # colors for GNU ls (from coreutils)
-eval $(dircolors ~/.lscolors)
+#eval $(dircolors ~/.lscolors)
 
-
+# Initialize fuzzy command line finder
 source ~/.zsh.d/fzf.zsh
