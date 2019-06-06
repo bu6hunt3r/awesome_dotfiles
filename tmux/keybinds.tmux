@@ -40,10 +40,6 @@ bind-key -T choice-mode-vi 'L' send-keys -X tree-expand-all
 bind -T copy-mode-vi 'y' send-keys -X copy-pipe-and-cancel "xsel -i --clipboard"
 #}}}
 
-# Selection with mouse should copy to clipboard right away, in addition to the default action.
-#unbind -n -T copy-mode-vi MouseDragEnd1Pane
-#bind -T copy-mode-vi MouseDragEnd1Pane send -X copy-selection-and-cancel; run "tmux save-buffer - | xclip -i -sel clipboard > /dev/null"
-
 # vim splits
 bind-key y split-window -h
 bind-key x split-window -v
@@ -83,12 +79,3 @@ bind -n F7 command-prompt "rename-window '%%'"
 
 # reload tmux config
 bind -n F8 source ~/.tmux.conf
-
-# rotate through different pre set layouts
-bind -n F9 next-layout
-
-# rotate through different pre set layouts
-bind -n F10 copy-mode
-
-# mouse support toggle needs tmux 2.2
-bind -n F11 set -g mouse
