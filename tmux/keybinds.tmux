@@ -37,7 +37,9 @@ bind-key -T choice-mode-vi 'h' send-keys -X tree-collapse
 bind-key -T choice-mode-vi 'l' send-keys -X tree-expand
 bind-key -T choice-mode-vi 'H' send-keys -X tree-collapse-all
 bind-key -T choice-mode-vi 'L' send-keys -X tree-expand-all
-bind -T copy-mode-vi 'y' send-keys -X copy-pipe-and-cancel "xsel -i --clipboard"
+bind -t vi-copy y \
+    copy-selection \;\
+    copy-pipe "xclip -sel clip -i";
 #}}}
 
 # vim splits
