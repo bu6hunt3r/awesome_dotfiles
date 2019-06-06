@@ -67,7 +67,7 @@ insert-last-command-output() {
 zle -N insert-last-command-output
 BINDKEYS[insert-last-command-output]='^[x'
 #bindkey '^[x' insert-last-command-output
-bindkey BINDKEYS[insert-last-command-output]  insert-last-command-output
+bindkey $BINDKEYS[insert-last-command-output]  insert-last-command-output
 
 # ctrl+b/f or ctrl+left/right : move word by word (backward/forward)
 bindkey '^b' backward-word
