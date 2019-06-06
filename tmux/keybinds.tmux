@@ -18,9 +18,6 @@ bind l select-pane -R
 # mouse behavior
 setw -g mouse
 
-# Selection with mouse should copy to clipboard right away, in addition to the default action.
-unbind -n -T copy-mode-vi MouseDragEnd1Pane
-bind -T copy-mode-vi MouseDragEnd1Pane send -X copy-selection-and-cancel; run "tmux save-buffer - | xclip -i -sel clipboard > /dev/null"
 
 #-------- Copy Mode (Vim Style) {{{
 #------------------------------------------------------
@@ -43,6 +40,10 @@ bind-key -T choice-mode-vi 'H' send-keys -X tree-collapse-all
 bind-key -T choice-mode-vi 'L' send-keys -X tree-expand-all
 bind -T copy-mode-vi 'y' send-keys -X copy-pipe-and-cancel "xsel -i --clipboard"
 #}}}
+
+# Selection with mouse should copy to clipboard right away, in addition to the default action.
+#unbind -n -T copy-mode-vi MouseDragEnd1Pane
+#bind -T copy-mode-vi MouseDragEnd1Pane send -X copy-selection-and-cancel; run "tmux save-buffer - | xclip -i -sel clipboard > /dev/null"
 
 # vim splits
 bind-key y split-window -h
