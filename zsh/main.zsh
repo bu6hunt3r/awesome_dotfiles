@@ -24,3 +24,8 @@ source ~/.zsh.d/alias-emacs.zsh
 source ~/.zsh.d/alias-vim.zsh
 # load prompt_settings
 source ~/.zsh.d/prompt.zsh
+# load plugin functionality
+source ~/.zsh.d/dotplug.zsh
+
+#load step
+load_plugins
