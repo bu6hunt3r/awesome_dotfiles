@@ -39,4 +39,4 @@ source ~/.zsh.d/completions.zsh
 # Initialize fuzzy command line finder
 source ~/.zsh.d/fzf.zsh
 
-source ~/zsh.d/syntax-highlighting.zsh
+source ~/.zsh.d/syntax-highlighting.zsh
