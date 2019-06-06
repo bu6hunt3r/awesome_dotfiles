@@ -56,4 +56,10 @@
 #   ctrl + k     : delete from character to end of line
 #   alt  + .     : cycle through previous args
 
+# alt-x : insert last command result
 zmodload -i zsh/parameter
+insert-last-command-output() {
+  LBUFFER+$"(eval $history[$((HISTCMD-1))])"
+}
+zle -N insert-last-command-output
+bindkey '^[x' insert-last-command-output
