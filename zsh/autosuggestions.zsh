@@ -1,1 +1,1 @@
-source ~/.dofiles/deps/zsh/zsh-users/zsh-autosuggestions
+source ~/.dofiles/deps/zsh/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh
