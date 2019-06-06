@@ -1,29 +1,44 @@
-# -*- mode: sh -*-
-
-# vi mode settings
-# Note: if you have EDITOR=vim set
-# then the following two settings aren't needed
-# Use Vi style key bindings to move around command line mode
-set-option -g status-keys vi
-# Use Vi style key bindings to move around copy mode
-setw -g mode-keys vi
-# Remove delay when pressing esc in Vim
-set -sg escape-time 0
-
+# Prefix
 unbind C-b
-set -g prefix C-Space
+set -g prefix C-a
+bind C-a send-prefix
+
+# Easy Config Reloads
+bind r source-file ~/.tmux.conf
 
 # Quick key for moving back to the previous window
 bind-key p last-window
 
-bind Space copy-mode
-bind r next-layout
+# Direction
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
 
-# Vim style bindings for pane movement
-bind-key -r h select-pane -L
-bind-key -r j select-pane -D
-bind-key -r k select-pane -U
-bind-key -r l select-pane -R
+# mouse behavior
+setw -g mouse
+
+#-------- Copy Mode (Vim Style) {{{
+#------------------------------------------------------
+# This section of hotkeys mainly work in copy mode and no where else
+
+# vim keys in copy and choose mode
+set-window-option -g mode-keys vi
+
+# copying selection vim style
+# http://jasonwryan.com/blog/2011/06/07/copy-and-paste-in-tmux/
+# https://github.com/myfreeweb/dotfiles/blob/master/tmux.conf
+bind-key Escape copy-mode			# enter copy mode; default [
+bind-key -T copy-mode-vi 'v' send -X begin-selection
+#bind-key -T copy-mode-vi 'y' send -X copy-selection-and-cancel
+bind-key -T copy-mode-vi 'V' send-keys -X select-line
+bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
+bind-key -T choice-mode-vi 'h' send-keys -X tree-collapse
+bind-key -T choice-mode-vi 'l' send-keys -X tree-expand
+bind-key -T choice-mode-vi 'H' send-keys -X tree-collapse-all
+bind-key -T choice-mode-vi 'L' send-keys -X tree-expand-all
+bind -T copy-mode-vi 'y' send-keys -X copy-pipe-and-cancel "xsel -i --clipboard"
+#}}}
 
 # vim splits
 bind-key y split-window -h
@@ -73,17 +88,3 @@ bind -n F10 copy-mode
 
 # mouse support toggle needs tmux 2.2
 bind -n F11 set -g mouse
-
-# toggles tmux bar on/off
-bind-key -n F12 set status
-
-# switch panes using <M-arrow> without prefix
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
-
-# create panes with <C-arrow> prefix
-bind -n C-M-Left split-window -h
-bind -n C-M-Right split-window -h
-bind -n C-M-Up split-window -v
