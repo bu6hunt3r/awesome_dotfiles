@@ -14,3 +14,5 @@ source ~/.zsh.d/fixescapecodes.zsh
 source ~/.zsh.d/functions.zsh
 # load diverse aliases
 source ~/.zsh.d/aliases.zsh
+# load git aliases
+source ~/.zsh.d/git-aliases.zsh

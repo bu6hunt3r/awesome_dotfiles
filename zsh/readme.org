@@ -6,3 +6,5 @@
 
 * aliases
 [[./aliases.zsh][zsh aliases]]
+* aliases
+[[./git-aliases.zsh][zsh git aliases]]
