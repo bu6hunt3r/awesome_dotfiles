@@ -56,6 +56,9 @@
 #   ctrl + k     : delete from character to end of line
 #   alt  + .     : cycle through previous args
 
+#declare associative array for bindkeys
+declare -A BINDKEYS
+
 # alt-x : insert last command result
 zmodload -i zsh/parameter
 insert-last-command-output() {
@@ -63,3 +66,10 @@ insert-last-command-output() {
 }
 zle -N insert-last-command-output
 bindkey '^[x' insert-last-command-output
+
+# ctrl+b/f or ctrl+left/right : move word by word (backward/forward)
+bindkey '^b' backward-word
+bindkey '^f' forward-word
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+
