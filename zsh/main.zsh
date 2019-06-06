@@ -13,4 +13,4 @@ source ~/.zsh.d/fixescapecodes.zsh
 # megabytes / kilobytes measurement & faster dir creation & bc utility
 source ~/.zsh.d/functions.zsh
 # load diverse aliases
-source ~/.zsh.d/alias.zsh
+source ~/.zsh.d/aliases.zsh
