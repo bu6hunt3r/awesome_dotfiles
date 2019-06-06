@@ -18,7 +18,6 @@ bind l select-pane -R
 # mouse behavior
 setw -g mouse
 
-
 #-------- Copy Mode (Vim Style) {{{
 #------------------------------------------------------
 # This section of hotkeys mainly work in copy mode and no where else
