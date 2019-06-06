@@ -5,8 +5,8 @@
 - alt+enter : Execute the current suggestion (using zsh-autosuggestions)
 
 * aliases
-- =ls='ls --color=auto --group-directories-first -X'=
-- =l='ls -lh'=
+- =ls= =='ls --color=auto --group-directories-first -X'=
+- =l= ='ls -lh'=
 - =la='l -A'=
 - =c='clear'=
 - =q='exit'=
