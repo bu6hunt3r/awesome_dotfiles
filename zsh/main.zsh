@@ -8,3 +8,5 @@ source ~/.zsh.d/options.zsh
 source ~/.zsh.d/termcolors.zsh
 # new bind keys in zsh
 source ~/.zsh.d/fixescapecodes.zsh
+# megabytes / kilobytes measurement & faster dir creation & bc utility
+source ~/.zsh.d/functions.zsh
