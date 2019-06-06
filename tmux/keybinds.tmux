@@ -19,8 +19,8 @@ bind l select-pane -R
 setw -g mouse
 
 # Selection with mouse should copy to clipboard right away, in addition to the default action.
-unbind -n -Tcopy-mode-vi MouseDragEnd1Pane
-bind -Tcopy-mode-vi MouseDragEnd1Pane send -X copy-selection-and-cancel\; run "tmux save-buffer - | xclip -i -sel clipboard > /dev/null"
+unbind -n -T copy-mode-vi MouseDragEnd1Pane
+bind -T copy-mode-vi MouseDragEnd1Pane send -X copy-selection-and-cancel; run "tmux save-buffer - | xclip -i -sel clipboard > /dev/null"
 
 #-------- Copy Mode (Vim Style) {{{
 #------------------------------------------------------
