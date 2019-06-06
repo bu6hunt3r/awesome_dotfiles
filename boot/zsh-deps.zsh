@@ -13,3 +13,4 @@ dotgrab zsh-users/zsh-completions
 dotgrab ninrod/pass-zsh-completion
 dotgrab ninrod/gradle-zsh-completion
 dotgrab zsh-users/zsh-autosuggestions
+dotgrab zsh-users/zsh-syntax-highlighting
