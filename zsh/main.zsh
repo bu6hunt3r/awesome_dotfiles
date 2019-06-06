@@ -6,6 +6,8 @@ source ~/.zsh.d/envbootstrap.zsh
 source ~/.zsh.d/options.zsh
 # ANSI Color codes
 source ~/.zsh.d/termcolors.zsh
+# load autosuggestions module
+source ~/.zsh.d/autosuggestions.zsh
 # new bind keys in zsh
 source ~/.zsh.d/fixescapecodes.zsh
 # megabytes / kilobytes measurement & faster dir creation & bc utility
