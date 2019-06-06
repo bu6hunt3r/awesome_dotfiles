@@ -5,3 +5,17 @@
 - alt+enter : Execute the current suggestion (using zsh-autosuggestions)
 
 * aliases
+- =ls='ls --color=auto --group-directories-first -X'=
+- =l='ls -lh'=
+- =la='l -A'=
+- =c='clear'=
+- =q='exit'=
+- =b='builtin cd ..'=
+- =w='echo -e "$Blue ${"$(pwd)"/$HOME/~} ${Red}at ${Cyan}$(whoami)${Red}@${Yellow}$(hostname -s)$Red \=
+- =$Yellow${0}$Purple ${DOT_PROMPT_CHAR:-$}${Rst}"'=
+- =tarc='tar -zcvf'=
+- =tarx='tar -zxvf'=
+- =re='exec zsh'=
+- =dot='la $(find ~ -maxdepth 1 -type l)'=
+- =r='~/.dotfiles/install.zsh'=
+- =t='~/.dotfile/scripts/tmux/tmux-attach.sh'=
