@@ -7,15 +7,15 @@ alias gi='builtin cd $(git rev-parse --show-toplevel)'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gal='git add -A'
-ealias ga='git add'
-ealias gc='git commit -m'
+alias ga='git add'
+alias gc='git commit -m'
 
 # sync
 alias gf='git fetch'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias gm='git merge'
-ealias gr='git reset'
+alias gr='git reset'
 
 # branch
 alias gb='git branch'
