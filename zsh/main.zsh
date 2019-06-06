@@ -22,3 +22,5 @@ source ~/.zsh.d/docker-aliases.zsh
 source ~/.zsh.d/alias-emacs.zsh
 # load vim aliases
 source ~/.zsh.d/alias-vim.zsh
+# load prompt_settings
+source ~/.zsh.d/prompt.zsh
