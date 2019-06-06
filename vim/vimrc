@@ -1,0 +1,2 @@
+source ~/.vim/options.vim
+source ~/.vim/autocommands.vim
