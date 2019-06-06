@@ -73,6 +73,7 @@ bindkey '^[[1;5C' forward-word
 # Ctrl+space print Git status
 bindkey -s '^ ' ' git status --short^M'
 
+zmodload -i zsh-users/zsh-autosuggestions
 # Execute the current suggestion (using zsh-autosuggestions)
 # Alt+Enter = '^[^M' on recent VTE and '^[^J' for older (Lxterminal)
 bindkey '^^M' autosuggest-execute
