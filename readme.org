@@ -49,6 +49,11 @@ Constants will be defined in =~/.options/shell-options.zsh=
 **** keybindings
 Look at: [[./zsh/readme.org][Zsh key bindings]]
 
+**** prompt settings
+File [[./zsh/prompt.zsh][prompt.zsh]] is referencing 
+=~/.options/shell-options.zsh=.
+See [[./zsh/readme.org][zsh readme]] for more information.
+
 - zsh_deps
 - emacs_deps
 - vim_deps
