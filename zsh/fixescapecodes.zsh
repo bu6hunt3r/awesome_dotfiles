@@ -77,7 +77,7 @@ BINDS["forward-word"]="ctrl+f/ctrl+right"
 
 # show keybindings
 show_keybinds() {
-  for KEY in "${!BINDS[@]}"; do
-    printf "$KEY - ${BINDS["$KEY"]}\n"
+  for k in '${!BINDS[@]}'; do
+    printf "%s\n" "$k ${BINDS[$k]}"
   done
 }
