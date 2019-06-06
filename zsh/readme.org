@@ -2,3 +2,6 @@
 * zsh keybindings
 - ctrl+b/f or ctrl+left/right : move word by word (backward/forward)
 - alt-x : insert last command result
+- alt+enter : Execute the current suggestion (using zsh-autosuggestions)
+
+* aliases
