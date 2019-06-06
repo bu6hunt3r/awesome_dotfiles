@@ -16,7 +16,7 @@ bind k select-pane -U
 bind l select-pane -R
 
 # mouse behavior
-setw -g mouse
+#setw -g mouse
 
 #-------- Copy Mode (Vim Style) {{{
 #------------------------------------------------------
