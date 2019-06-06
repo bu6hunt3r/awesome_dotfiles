@@ -14,3 +14,10 @@
 [[./alias-emacs.zsh][zsh emacs aliases]]
 * vim aliases
 [[./alias-vim.zsh][zsh emacs aliases]]
+* prompt
+Don't forget to specify your prompt setting within
+=~/.options/shell-options.zsh=
+#+BEGIN_SRC 
+DOT_PROMPT_CHAR="λ"
+SHELL_PROMPT_INFO_LEVEL="0"
+#+END_SRC
