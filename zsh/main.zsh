@@ -19,4 +19,6 @@ source ~/.zsh.d/git-aliases.zsh
 # load docker aliases
 source ~/.zsh.d/docker-aliases.zsh
 # load emacs aliases
-source ~/.zsh.d/emacs-aliases.zsh
+source ~/.zsh.d/alias-emacs.zsh
+# load vim aliases
+source ~/.zsh.d/alias-vim.zsh

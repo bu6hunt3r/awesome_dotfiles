@@ -11,4 +11,6 @@
 * docker aliases
 [[./docker-aliases.zsh][zsh docker aliases]]
 * emacs aliases
-[[./emacs-aliases.zsh][zsh emacs aliases]]
+[[./alias-emacs.zsh][zsh emacs aliases]]
+* vim aliases
+[[./alias-vim.zsh][zsh emacs aliases]]
