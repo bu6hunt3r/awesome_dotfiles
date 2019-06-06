@@ -16,3 +16,7 @@ source ~/.zsh.d/functions.zsh
 source ~/.zsh.d/aliases.zsh
 # load git aliases
 source ~/.zsh.d/git-aliases.zsh
+# load docker aliases
+source ~/.zsh.d/docker-aliases.zsh
+# load emacs aliases
+source ~/.zsh.d/emacs-aliases.zsh

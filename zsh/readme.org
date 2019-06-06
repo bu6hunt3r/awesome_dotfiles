@@ -6,5 +6,9 @@
 
 * aliases
 [[./aliases.zsh][zsh aliases]]
-* aliases
+* git aliases
 [[./git-aliases.zsh][zsh git aliases]]
+* docker aliases
+[[./docker-aliases.zsh][zsh docker aliases]]
+* emacs aliases
+[[./emacs-aliases.zsh][zsh emacs aliases]]
