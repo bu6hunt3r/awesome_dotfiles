@@ -91,7 +91,4 @@ else
     alias iwconfig="grc iwconfig"
     alias lolcat="grc lolcat"
     alias whois="grc whois"
-    alias vagrant-rsync='rsync --progress -av -e "ssh -p 2222" . vagrant@127.0.0.1:/home/vagrant/host-share'
-    alias vboxmanage="VBoxManage"
-    alias readelf="/home/cr0c0/git-repos/colorreadelf/creadelf.pl"
 fi
