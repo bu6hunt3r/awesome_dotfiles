@@ -17,6 +17,9 @@ source $GIT_ROOT/boot/guard.zsh
 # defining functions verifylink build_git_url git_clone_error_msg dotgrab
 source $GIT_ROOT/boot/functions.zsh $1
 
+# Load custom shell options like prompt level, etc...
+source ~/.options/shell-options.zsh
+
 # Checking symlinks for repos within ~/.dotfiles
 source $GIT_ROOT/boot/symlinks.zsh
 
