@@ -69,15 +69,3 @@ bindkey '^b' backward-word
 bindkey '^f' forward-word
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
-
-declare -A BINDS
-BINDS["insert-last-command-output"]="alt+x"
-BINDS["backward-word"]="ctrl+b/ctrl+left"
-BINDS["forward-word"]="ctrl+f/ctrl+right"
-
-# show keybindings
-show_keybinds() {
-  for k in '${!BINDS[@]}'; do
-    printf "%s\n" "$k ${BINDS[$k]}"
-  done
-}

@@ -46,6 +46,9 @@ Grab external dependencies for:
 **** constants
 Constants will be defined in =~/.options/shell-options.zsh=
 
+**** keybindings
+Look at: [[./zsh/readme.org][Zsh key bindings]]
+
 - zsh_deps
 - emacs_deps
 - vim_deps

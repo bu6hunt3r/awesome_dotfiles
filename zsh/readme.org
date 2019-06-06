@@ -1,0 +1,4 @@
+#+TITLE: ZSH settings
+* zsh keybindings
+- ctrl+b/f or ctrl+left/right : move word by word (backward/forward)
+- alt-x : insert last command result
