@@ -29,3 +29,6 @@ source ~/.zsh.d/dotplug.zsh
 
 #load step
 load_plugins
+
+# init completion system
+source ~/.zsh.d/completions.zsh
