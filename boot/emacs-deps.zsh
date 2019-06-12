@@ -8,3 +8,4 @@ dotgrab ninrod/evil-string-inflection
 
 # 3rd party
 dotgrab noctuid/rect-ext.el
+dotgrab emacs-evil/evil
