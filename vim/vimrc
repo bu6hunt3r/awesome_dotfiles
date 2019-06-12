@@ -20,4 +20,85 @@ filetype indent on
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
+" Tabs are shown as 2 spaces
+set softtabstop=2
+set shiftwidth=2
 
+" When 'Search next' reach the end of the file, it wraps around the beginning
+set wrapscan
+
+" set the search scan so that it ignores case when the search is all lower
+" case but recognizes uppercase if it's specified
+set ignorecase
+set smartcase
+
+" Command line height
+set ch=2
+
+" set visual bell
+set vb
+
+" Make sure that unsaved buffers that are to be put in the background are
+" allowed to go in there (ie. the "must save first" error doesn't come up)
+set hidden
+
+" tell VIM to always put a status line in, even if there is only one window
+set laststatus=2
+
+" Show the current command in the lower right corner
+set showcmd
+
+" Show the current mode
+set showmode
+
+" Switch on syntax highlighting.
+syntax on
+
+" Keep some stuff in the history
+set history=100
+
+" Make the command-line completion better
+set wildmenu
+
+" When completing by tag, show the whole tag, not just the function name
+set showfulltag
+
+" don't initially wrap
+set nowrap
+
+" When wrap is on, show breaks with symbol
+let &showbreak = '↳ '
+
+" Indent lines
+set autoindent
+set smartindent
+
+" Turn tabs into spaces
+set expandtab
+
+" Enable search highlighting
+set hlsearch
+
+" Incrementally match the search
+set incsearch
+
+" Display line number
+set number
+
+" Lines above/below cursor when scrolling
+set scrolloff=5
+
+" Minimal columns displayed when scrolling horizontally
+set sidescrolloff=5
+
+" Enable scrolling horizontally column by column
+set sidescroll=1
+
+" Apparence
+set t_Co=256
+set termguicolors
+let ayucolor="light"
+colorscheme ayu
+
+" Highlight current line
+set cursorline
