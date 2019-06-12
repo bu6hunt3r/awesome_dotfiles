@@ -6,3 +6,18 @@ source ~/.vim/keybinds.vim
 source ~/.vim/font.vim
 source ~/.vim/cursorshape.vim
 
+" Forget being compatible with good ol' vi
+set nocompatible
+
+" Default encoding
+set encoding=utf-8
+
+" Set filetype stuff to on
+filetype on
+filetype plugin on
+filetype indent on
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:·
+
+
