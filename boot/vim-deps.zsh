@@ -43,6 +43,9 @@ dotgrab editorconfig/editorconfig-vim
 dotgrab scrooloose/nerdtree
 dotgrab ryanoasis/vim-devicons
 
+# Autocompletion
+dotgrab Valloric/YouCompleteMe
+
 # pathogen installation
 PATHOGEN_FILE=$vim_deps/tpope/vim-pathogen/autoload/pathogen.vim
 AUTOLOAD_DIR=~/.vim/autoload
