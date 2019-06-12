@@ -1,3 +1,4 @@
+
 source ~/.vim/options.vim
 source ~/.vim/autocommands.vim
 source ~/.vim/hacks.vim
@@ -102,6 +103,7 @@ colorscheme ayu
 
 " Highlight current line
 set cursorline
+highlight CursorLine gui=underline cterm=underline ctermfg=None guibg=NONE
 
 " Enable the mouse
 set mouse=a
@@ -245,3 +247,7 @@ let g:ctrlp_max_height = 30
 "
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='sol'
+
+highlight Normal ctermbg=NONE guibg=NONE
+highlight SignColumn ctermbg=NONE guibg=NONE
+highlight LineNr ctermbg=NONE guibg=NONE
