@@ -1,40 +1,38 @@
 mkdir -p $vim_deps && cd $vim_deps
 
 # fetch core editing deps
-dotgrab bronson/vim-visual-star-search
-dotgrab chaoren/vim-wordmotion
-dotgrab ervandew/supertab
-dotgrab junegunn/fzf.vim
-dotgrab junegunn/vim-easy-align
-dotgrab kana/vim-textobj-entire
-dotgrab kana/vim-textobj-user
-dotgrab ninrod/ninscratch-vim
-dotgrab terryma/vim-multiple-cursors
-dotgrab tommcdo/vim-exchange
-dotgrab tpope/vim-commentary
-dotgrab tpope/vim-pathogen
-dotgrab tpope/vim-repeat
-dotgrab tpope/vim-surround
-dotgrab vim-scripts/ReplaceWithRegister
-dotgrab wellle/targets.vim
+ningrab bronson/vim-visual-star-search
+ningrab chaoren/vim-wordmotion
+ningrab ervandew/supertab
+ningrab junegunn/fzf.vim
+ningrab junegunn/vim-easy-align
+ningrab kana/vim-textobj-entire
+ningrab kana/vim-textobj-user
+ningrab ninrod/ninscratch-vim
+ningrab terryma/vim-multiple-cursors
+ningrab tommcdo/vim-exchange
+ningrab tpope/vim-commentary
+ningrab tpope/vim-pathogen
+ningrab tpope/vim-repeat
+ningrab tpope/vim-surround
+ningrab vim-scripts/ReplaceWithRegister
+ningrab wellle/targets.vim
 
 # fetch cosmetic deps
-dotgrab itchyny/lightline.vim
-dotgrab morhetz/gruvbox
-dotgrab junegunn/rainbow_parentheses.vim
+ningrab itchyny/lightline.vim
+ningrab morhetz/gruvbox
+ningrab junegunn/rainbow_parentheses.vim
 
 # fetch buffer/file manipulation deps
-dotgrab jlanzarotta/bufexplorer
-dotgrab francoiscabrol/ranger.vim
+ningrab jlanzarotta/bufexplorer
+ningrab francoiscabrol/ranger.vim
 
 # filetypes
-dotgrab chr4/nginx.vim
-
-# axu theme
-dotgrab ayu-theme/ayu-vim
+ningrab chr4/nginx.vim
 
 # pathogen installation
 PATHOGEN_FILE=$vim_deps/tpope/vim-pathogen/autoload/pathogen.vim
 AUTOLOAD_DIR=~/.vim/autoload
 [[ ! -d  $AUTOLOAD_DIR ]] && mkdir -p $AUTOLOAD_DIR
 cp $PATHOGEN_FILE ~/.vim/autoload
+

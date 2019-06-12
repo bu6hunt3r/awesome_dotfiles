@@ -101,3 +101,4 @@ nnoremap mi :BufExplorer<cr>
 nnoremap <BS> :Ranger<cr>
 
 " }}}
+
