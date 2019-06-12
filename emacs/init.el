@@ -44,10 +44,8 @@
 
   (garbage-collect))
 
-(add-to-list 'load-path "./deps/emacs/emacs-evil/evil")
-(require 'evil)
-(evil-mode 1)
-
-(add-to-list 'load-path "./deps/emacs/jaypei/emacs-neotree")
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+         "* %?\nEntered on %U\n  %i\n  %a")))
