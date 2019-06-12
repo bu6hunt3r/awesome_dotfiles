@@ -41,6 +41,7 @@ dotgrab sheerun/vim-polyglot
 dotgrab tomtom/tcomment_vim
 dotgrab editorconfig/editorconfig-vim
 dotgrab scrooloose/nerdtree
+dotgrab ryanoasis/vim-devicons
 
 # pathogen installation
 PATHOGEN_FILE=$vim_deps/tpope/vim-pathogen/autoload/pathogen.vim
