@@ -30,6 +30,17 @@ dotgrab francoiscabrol/ranger.vim
 # filetypes
 dotgrab chr4/nginx.vim
 
+dotgrab ayu-theme/ayu-vim
+dotgrab tpope/vim-unimpaired
+dotgrab briandoll/change-inside-surroundings.vim
+dotgrab kien/ctrlp.vim
+dotgrab vim-airline/vim-airline
+dotgrab vim-airline/vim-airline-themes
+dotgrab tomtom/quickfixsigns_vim
+dotgrab sheerun/vim-polyglot
+dotgrab tomtom/tcomment_vim
+dotgrab editorconfig/editorconfig-vim
+
 # pathogen installation
 PATHOGEN_FILE=$vim_deps/tpope/vim-pathogen/autoload/pathogen.vim
 AUTOLOAD_DIR=~/.vim/autoload
