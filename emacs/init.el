@@ -44,6 +44,10 @@
 
   (garbage-collect))
 
-(add-to-list 'load-path "/some/path/neotree")
+(add-to-list 'load-path "./deps/emacs/emacs-evil/evil")
+(require 'evil)
+(evil-mode 1)
+
+(add-to-list 'load-path "./deps/emacs/jaypei/emacs-neotree")
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
