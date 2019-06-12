@@ -9,4 +9,4 @@ dotgrab ninrod/evil-string-inflection
 # 3rd party
 dotgrab noctuid/rect-ext.el
 dotgrab emacs-evil/evil
-dotgrab zk/emacs-dirtree
+dotgrab jaypei/emacs-neotree

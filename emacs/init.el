@@ -43,3 +43,7 @@
            (message "post-secrets does NOT exist. nothing to see here."))))
 
   (garbage-collect))
+
+(add-to-list 'load-path "/some/path/neotree")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
