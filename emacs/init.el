@@ -13,5 +13,9 @@
         ("j" "Journal" entry (file+datetree "~/org/journal.org")
          "* %?\nEntered on %U\n  %i\n  %a")))
 
+;; set neotree key binding
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
 ;; transparent background color
 (set-background-color "ARGBBB000000")
