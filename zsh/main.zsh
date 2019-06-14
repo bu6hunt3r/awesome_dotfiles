@@ -40,3 +40,4 @@ source ~/.zsh.d/completions.zsh
 source ~/.zsh.d/fzf.zsh
 
 source ~/.zsh.d/syntax-highlighting.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

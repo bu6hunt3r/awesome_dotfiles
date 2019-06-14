@@ -1,4 +1,231 @@
-[1;33m[STATUS - /home/cr0c0/Desktop/awesome_dotfiles/zsh/termcolors.zsh][m Loaded termcolors...
-[1;33m[STATUS - /home/cr0c0/Desktop/awesome_dotfiles/zsh/constants.zsh][m Loaded constants: zsh_deps emacs_deps vim_deps other_deps 
-[1;33m[STATUS - /home/cr0c0/Desktop/awesome_dotfiles/boot/guard.zsh][0m readlink command found. continuing
-ARG 
+[1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/guard.zsh][0m readlink command found. continuing
+[1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/functions.zsh][0m Loaded git management functions.
+[1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/symlinks.zsh][0m Sourcing deploy scripts.
+	/home/cr0c0/.bashrc [32mok.[0m
+	/home/cr0c0/.bash_profile [32mok.[0m
+	/home/cr0c0/.emacs.d [32mok.[0m
+	/home/cr0c0/.tmux.conf [32mok.[0m
+	/home/cr0c0/.tmux.d [32mok.[0m
+[1;33m[INFO][m Cloning tmux plugin manager
+fatal: Zielpfad '/home/cr0c0/.tmux/plugins/tpm' existiert bereits und ist kein leeres Verzeichnis.
+fatal: Zielpfad '/home/cr0c0/.tmux/plugins/tmux-fingers' existiert bereits und ist kein leeres Verzeichnis.
+	/home/cr0c0/.vim [32mok.[0m
+	/home/cr0c0/.zshrc [32mok.[0m
+	/home/cr0c0/.zsh.d [32mok.[0m
+	/home/cr0c0/.zshenv [31m-[30mX[0m->[0m /home/cr0c0/.zshenv [32m->[0m /home/cr0c0/awesome_dotfiles/zsh/zshenv.zsh
+[1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/symlinks.zsh][0m Checking/Updated symlinks within /home/cr0c0/dotfiles.
+	/home/cr0c0/.dotfiles [32mok.[0m
+[1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/zsh-deps.zsh][0m Creating dir /home/cr0c0/.dotfiles/deps/zsh.
+
+-------------------
+[[32mninrod/zsh-bd[0m] already cloned from [34mhttps://github.com/ninrod/zsh-bd.git[0m
+-------------------
+
+-------------------
+[[32mninrod/k[0m] already cloned from [34mhttps://github.com/ninrod/k.git[0m
+-------------------
+
+-------------------
+[[32mninrod/docker-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/docker-zsh-completion.git[0m
+-------------------
+
+-------------------
+[[32mninrod/docker-compose-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/docker-compose-zsh-completion.git[0m
+-------------------
+
+-------------------
+[[32mzsh-users/zsh-completions[0m] already cloned from [34mhttps://github.com/zsh-users/zsh-completions.git[0m
+-------------------
+
+-------------------
+[[32mninrod/pass-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/pass-zsh-completion.git[0m
+-------------------
+
+-------------------
+[[32mninrod/gradle-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/gradle-zsh-completion.git[0m
+-------------------
+
+-------------------
+[[32mzsh-users/zsh-autosuggestions[0m] already cloned from [34mhttps://github.com/zsh-users/zsh-autosuggestions.git[0m
+-------------------
+
+-------------------
+[[32mzsh-users/zsh-syntax-highlighting[0m] already cloned from [34mhttps://github.com/zsh-users/zsh-syntax-highlighting.git[0m
+-------------------
+
+-------------------
+[[32mbronson/vim-visual-star-search[0m] already cloned from [34mhttps://github.com/bronson/vim-visual-star-search.git[0m
+-------------------
+
+-------------------
+[[32mchaoren/vim-wordmotion[0m] already cloned from [34mhttps://github.com/chaoren/vim-wordmotion.git[0m
+-------------------
+
+-------------------
+[[32mervandew/supertab[0m] already cloned from [34mhttps://github.com/ervandew/supertab.git[0m
+-------------------
+
+-------------------
+[[32mjunegunn/fzf.vim[0m] already cloned from [34mhttps://github.com/junegunn/fzf.vim.git[0m
+-------------------
+
+-------------------
+[[32mjunegunn/vim-easy-align[0m] already cloned from [34mhttps://github.com/junegunn/vim-easy-align.git[0m
+-------------------
+
+-------------------
+[[32mkana/vim-textobj-entire[0m] already cloned from [34mhttps://github.com/kana/vim-textobj-entire.git[0m
+-------------------
+
+-------------------
+[[32mkana/vim-textobj-user[0m] already cloned from [34mhttps://github.com/kana/vim-textobj-user.git[0m
+-------------------
+
+-------------------
+[[32mninrod/ninscratch-vim[0m] already cloned from [34mhttps://github.com/ninrod/ninscratch-vim.git[0m
+-------------------
+
+-------------------
+[[32mterryma/vim-multiple-cursors[0m] already cloned from [34mhttps://github.com/terryma/vim-multiple-cursors.git[0m
+-------------------
+
+-------------------
+[[32mtommcdo/vim-exchange[0m] already cloned from [34mhttps://github.com/tommcdo/vim-exchange.git[0m
+-------------------
+
+-------------------
+[[32mtpope/vim-commentary[0m] already cloned from [34mhttps://github.com/tpope/vim-commentary.git[0m
+-------------------
+
+-------------------
+[[32mtpope/vim-pathogen[0m] already cloned from [34mhttps://github.com/tpope/vim-pathogen.git[0m
+-------------------
+
+-------------------
+[[32mtpope/vim-repeat[0m] already cloned from [34mhttps://github.com/tpope/vim-repeat.git[0m
+-------------------
+
+-------------------
+[[32mtpope/vim-surround[0m] already cloned from [34mhttps://github.com/tpope/vim-surround.git[0m
+-------------------
+
+-------------------
+[[32mvim-scripts/ReplaceWithRegister[0m] already cloned from [34mhttps://github.com/vim-scripts/ReplaceWithRegister.git[0m
+-------------------
+
+-------------------
+[[32mwellle/targets.vim[0m] already cloned from [34mhttps://github.com/wellle/targets.vim.git[0m
+-------------------
+
+-------------------
+[[32mitchyny/lightline.vim[0m] already cloned from [34mhttps://github.com/itchyny/lightline.vim.git[0m
+-------------------
+
+-------------------
+[[32mmorhetz/gruvbox[0m] already cloned from [34mhttps://github.com/morhetz/gruvbox.git[0m
+-------------------
+
+-------------------
+[[32mjunegunn/rainbow_parentheses.vim[0m] already cloned from [34mhttps://github.com/junegunn/rainbow_parentheses.vim.git[0m
+-------------------
+
+-------------------
+[[32mjlanzarotta/bufexplorer[0m] already cloned from [34mhttps://github.com/jlanzarotta/bufexplorer.git[0m
+-------------------
+
+-------------------
+[[32mfrancoiscabrol/ranger.vim[0m] already cloned from [34mhttps://github.com/francoiscabrol/ranger.vim.git[0m
+-------------------
+
+-------------------
+[[32mchr4/nginx.vim[0m] already cloned from [34mhttps://github.com/chr4/nginx.vim.git[0m
+-------------------
+
+-------------------
+[[32mayu-theme/ayu-vim[0m] already cloned from [34mhttps://github.com/ayu-theme/ayu-vim.git[0m
+-------------------
+
+-------------------
+[[32mtpope/vim-unimpaired[0m] already cloned from [34mhttps://github.com/tpope/vim-unimpaired.git[0m
+-------------------
+
+-------------------
+[[32mbriandoll/change-inside-surroundings.vim[0m] already cloned from [34mhttps://github.com/briandoll/change-inside-surroundings.vim.git[0m
+-------------------
+
+-------------------
+[[32mkien/ctrlp.vim[0m] already cloned from [34mhttps://github.com/kien/ctrlp.vim.git[0m
+-------------------
+
+-------------------
+[[32mvim-airline/vim-airline[0m] already cloned from [34mhttps://github.com/vim-airline/vim-airline.git[0m
+-------------------
+
+-------------------
+[[32mvim-airline/vim-airline-themes[0m] already cloned from [34mhttps://github.com/vim-airline/vim-airline-themes.git[0m
+-------------------
+
+-------------------
+[[32mtomtom/quickfixsigns_vim[0m] already cloned from [34mhttps://github.com/tomtom/quickfixsigns_vim.git[0m
+-------------------
+
+-------------------
+[[32msheerun/vim-polyglot[0m] already cloned from [34mhttps://github.com/sheerun/vim-polyglot.git[0m
+-------------------
+
+-------------------
+[[32mtomtom/tcomment_vim[0m] already cloned from [34mhttps://github.com/tomtom/tcomment_vim.git[0m
+-------------------
+
+-------------------
+[[32meditorconfig/editorconfig-vim[0m] already cloned from [34mhttps://github.com/editorconfig/editorconfig-vim.git[0m
+-------------------
+
+-------------------
+[[32mscrooloose/nerdtree[0m] already cloned from [34mhttps://github.com/scrooloose/nerdtree.git[0m
+-------------------
+
+-------------------
+[[32mryanoasis/vim-devicons[0m] already cloned from [34mhttps://github.com/ryanoasis/vim-devicons.git[0m
+-------------------
+
+-------------------
+[[32mValloric/YouCompleteMe[0m] already cloned from [34mhttps://github.com/Valloric/YouCompleteMe.git[0m
+-------------------
+
+-------------------
+[[32mninrod/gruvbox-theme[0m] already cloned from [34mhttps://github.com/ninrod/gruvbox-theme.git[0m
+-------------------
+
+-------------------
+[[32mninrod/rsynced-melpa[0m] already cloned from [34mhttps://github.com/ninrod/rsynced-melpa.git[0m
+-------------------
+
+-------------------
+[[32mninrod/evil-replace-with-char[0m] already cloned from [34mhttps://github.com/ninrod/evil-replace-with-char.git[0m
+-------------------
+
+-------------------
+[[32mninrod/evil-string-inflection[0m] already cloned from [34mhttps://github.com/ninrod/evil-string-inflection.git[0m
+-------------------
+
+-------------------
+[[32mnoctuid/rect-ext.el[0m] already cloned from [34mhttps://github.com/noctuid/rect-ext.el.git[0m
+-------------------
+
+-------------------
+[[32memacs-evil/evil[0m] already cloned from [34mhttps://github.com/emacs-evil/evil.git[0m
+-------------------
+
+-------------------
+[[32mjaypei/emacs-neotree[0m] already cloned from [34mhttps://github.com/jaypei/emacs-neotree.git[0m
+-------------------
+
+-------------------
+[[32mseebi/dircolors-solarized[0m] already cloned from [34mhttps://github.com/seebi/dircolors-solarized.git[0m
+-------------------
+	/home/cr0c0/.lscolors [32mok.[0m
+
+-------------------
+[[32mMorantron/tmux-fingers[0m] already cloned from [34mhttps://github.com/Morantron/tmux-fingers.git[0m
+-------------------

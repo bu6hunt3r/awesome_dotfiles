@@ -253,3 +253,8 @@ highlight SignColumn ctermbg=NONE guibg=NONE
 highlight LineNr ctermbg=NONE guibg=NONE
 
 map <C-A> :NERDTreeToggle<CR>
+
+syntax enable
+colorscheme darcula
+
+hi Normal guibg=NONE ctermbg=NONE
