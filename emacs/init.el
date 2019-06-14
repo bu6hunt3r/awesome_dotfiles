@@ -12,10 +12,10 @@
     
     (use-package diminish :ensure t)
 
-    (use-package org
-        :pin org
-        :ensure org-plus-contrib
-        :defer 7)  ;; fetch latest version of `org-mode'
+    ;;(use-package org
+    ;;    :pin org
+    ;;    :ensure org-plus-contrib
+    ;;    :defer 7)  ;; fetch latest version of `org-mode'
     
     (setq vc-follow-symlinks "t")
 
@@ -49,3 +49,6 @@
          "* TODO %?\n  %i\n  %a")
         ("j" "Journal" entry (file+datetree "~/org/journal.org")
          "* %?\nEntered on %U\n  %i\n  %a")))
+
+;; transparent background color
+(set-background-color "ARGBBB000000")
