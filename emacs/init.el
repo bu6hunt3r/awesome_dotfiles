@@ -19,31 +19,6 @@
     
     (setq vc-follow-symlinks "t")
 
-    (defun bu6hunt3r/parent-dir (dirname times)
-        "get the parent dir of DIRNAME"
-        (let* ((path (file-truename dirname)))
-        (dotimes (number times path)
-            (setq path (file-name-directory (directory-file-name path))))
-        path))
-  
-  (let ((secrets-file "secrets/emacs-pre.org"))
-    (cond ((file-exists-p (concat (bu6hunt3r/parent-dir user-emacs-directory 2) secrets-file))
-           (message "pre-secrets EXISTS!!! loading...")
-           (org-babel-load-file (expand-file-name secrets-file "~/code/sources")))
-          (t
-           (message "pre-secrets does NOT exist. nothing to see here."))))
-
-  ;; (org-babel-load-file (expand-file-name "boot.org" user-emacs-directory))
-
-  (let ((secrets-file "secrets/emacs-post.org"))
-    (cond ((file-exists-p (concat (ninrod/parent-dir user-emacs-directory 2) secrets-file))
-           (message "post-secrets EXISTS!!! loading...")
-           (org-babel-load-file (expand-file-name secrets-file "~/code/sources")))
-          (t
-           (message "post-secrets does NOT exist. nothing to see here."))))
-
-  (garbage-collect))
-
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
          "* TODO %?\n  %i\n  %a")
