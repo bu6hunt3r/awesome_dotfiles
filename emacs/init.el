@@ -1,3 +1,6 @@
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/"))
+
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
          "* TODO %?\n  %i\n  %a")
