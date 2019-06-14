@@ -33,7 +33,7 @@
           (t
            (message "pre-secrets does NOT exist. nothing to see here."))))
 
-  (org-babel-load-file (expand-file-name "boot.org" user-emacs-directory))
+  ;; (org-babel-load-file (expand-file-name "boot.org" user-emacs-directory))
 
   (let ((secrets-file "secrets/emacs-post.org"))
     (cond ((file-exists-p (concat (ninrod/parent-dir user-emacs-directory 2) secrets-file))
