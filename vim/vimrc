@@ -97,12 +97,12 @@ set sidescroll=1
 
 " Apparence
 set t_Co=256
-set termguicolors
-let ayucolor="light"
-colorscheme ayu
+"set termguicolors
+" let ayucolor="light"
+" colorscheme ayu
 
 " Highlight current line
-set cursorline
+" set cursorline
 highlight CursorLine gui=underline cterm=underline ctermfg=None guibg=NONE
 
 " Enable the mouse
@@ -204,17 +204,17 @@ runtime macros/matchit.vim
 "
 " GVim configuration
 "
-if has('gui_running')
+" if has('gui_running')
   "set guifont=Monospace\ Bold\ 9
-  set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
+  "set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
 
   " Turn off toolbar and menu
-  set guioptions-=T
-  set guioptions-=m
+  "set guioptions-=T
+  "set guioptions-=m
 
   " Window size
-  set lines=50 columns=120
-end
+  "set lines=50 columns=120
+"end
 
 
 "
@@ -246,7 +246,7 @@ let g:ctrlp_max_height = 30
 " Airline
 "
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='sol'
+let g:airline_theme='gruvbox'
 
 highlight Normal ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
@@ -255,6 +255,9 @@ highlight LineNr ctermbg=NONE guibg=NONE
 map <C-A> :NERDTreeToggle<CR>
 
 syntax enable
-colorscheme darcula
+colorscheme gruvbox
 
-hi Normal guibg=NONE ctermbg=NONE
+"hi Normal guibg=NONE ctermbg=NONE
+
+" Disable YCM preview
+set completeopt-=preview
