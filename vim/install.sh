@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 set -e
 
 if [ ! -n "$OH_MY_VIM" ]; then
@@ -46,3 +47,5 @@ echo "\033[0;32m"'\____/_//_/ /_/  /_/   /_/   |___/___/_/  /_/    '"\033[0m"
 echo "\n\n \033[0;32mPlease look over the ~/.vimrc file to select plugins, themes, and options.\033[0m"
 echo "\n\n \033[0;32mThen open you vim and it will install plugins for you.\033[0m"
 echo "\n\n \033[0;32mEnjoy!.\033[0m"
+
+mkdir $OH_MY_VIM"/colors"

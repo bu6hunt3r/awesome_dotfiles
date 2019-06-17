@@ -9,7 +9,7 @@
 [1;33m[INFO][m Cloning tmux plugin manager
 fatal: Zielpfad '/home/cr0c0/.tmux/plugins/tpm' existiert bereits und ist kein leeres Verzeichnis.
 fatal: Zielpfad '/home/cr0c0/.tmux/plugins/tmux-fingers' existiert bereits und ist kein leeres Verzeichnis.
-	/home/cr0c0/.vim [32mok.[0m
+	/home/cr0c0/.vim [32m->[0m /home/cr0c0/awesome_dotfiles/vim
 ./vim/deploy.zsh:source:4: datei oder Verzeichnis nicht gefunden: ./install.sh
 	/home/cr0c0/.zshrc [32mok.[0m
 	/home/cr0c0/.zsh.d [32mok.[0m

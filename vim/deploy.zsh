@@ -1,4 +1,2 @@
-verifylink ~/.vim
-updatelinks ~/.vim vim
-
+#!/usr/bin/env zsh
 source ./install.sh
