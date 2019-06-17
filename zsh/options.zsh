@@ -1,3 +1,5 @@
+# Set TERM variable
+export TERM="screen-256color"
 # defining word endings
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 

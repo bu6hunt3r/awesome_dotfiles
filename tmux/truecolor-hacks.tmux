@@ -1,5 +1,5 @@
 # Ensure terminal starts with its own colour scheme (defined below)
-set -g default-terminal "xterm-256color"
+set -g default-terminal "screen-256color"
 
 # add support for truecolor
 # more info here: https://github.com/ninrod/tricks/blob/master/shell/tmux.md#the-standard-way-since-tmux-22
