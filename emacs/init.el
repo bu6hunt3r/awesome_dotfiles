@@ -51,7 +51,7 @@
  ;; If there is more than one, they won't work right.
  )
 
-(setq org-support-shift-select t)
+(setq org-support-shift-select 'always')
 
 ;; Customize doom-theme
 (require 'doom-themes)
