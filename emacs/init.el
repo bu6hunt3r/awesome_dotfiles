@@ -6,6 +6,15 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) 
 
+(unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+      (package-install 'use-package))
+
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+; then define packages you use
+(use-package doom-themes)
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
