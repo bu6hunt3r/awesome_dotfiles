@@ -24,6 +24,5 @@ source ~/.options/shell-options.zsh
 source $GIT_ROOT/boot/symlinks.zsh
 
 source $GIT_ROOT/boot/zsh-deps.zsh
-source $GIT_ROOT/boot/vim-deps.zsh
 source $GIT_ROOT/boot/emacs-deps.zsh
 source $GIT_ROOT/boot/other-deps.zsh

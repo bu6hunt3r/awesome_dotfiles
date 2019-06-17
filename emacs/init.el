@@ -15,6 +15,7 @@
 
 ; then define packages you use
 (use-package doom-themes)
+(use-package neotree)
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
@@ -24,10 +25,10 @@
 
 ;; set neotree key binding
 (require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+(global-set-key [f12] 'neotree-toggle)
 
 ;; set gruvbox theme
-(load-theme 'gruvbox t)
+;; (load-theme 'gruvbox t)
 
 ;; transparent background color
 (set-background-color "ARGBBB000000")
@@ -48,3 +49,25 @@
  )
 
 (setq org-support-shift-select t)
+
+;; Customize doom-theme
+(require 'doom-themes)
+
+;; Global settings (defaults)
+(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+            doom-themes-enable-italic t) ; if nil, italics is universally disabled
+
+;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
+;; may have their own settings.
+(load-theme 'doom-one t)
+
+;; Enable flashing mode-line on errors
+(doom-themes-visual-bell-config)
+
+;; Enable custom neotree theme (all-the-icons must be installed!)
+(doom-themes-neotree-config)
+;; or for treemacs users
+(doom-themes-treemacs-config)
+
+;; Corrects (and improves) org-mode's native fontification.
+(doom-themes-org-config)
