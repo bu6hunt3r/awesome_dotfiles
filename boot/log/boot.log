@@ -4,7 +4,7 @@
 	/home/cr0c0/.bashrc [32mok.[0m
 	/home/cr0c0/.bash_profile [32mok.[0m
 	/home/cr0c0/.emacs.d [32mok.[0m
-	/home/cr0c0/.tmux.conf [32m->[0m /home/cr0c0/awesome_dotfiles/tmux/main.tmux
+	/home/cr0c0/.tmux.conf [32mok.[0m
 	/home/cr0c0/.tmux.d [32mok.[0m
 [1;33m[INFO][m Cloning tmux plugin manager
 fatal: Zielpfad '/home/cr0c0/.tmux/plugins/tpm' existiert bereits und ist kein leeres Verzeichnis.
@@ -16,322 +16,216 @@ fatal: Zielpfad '/home/cr0c0/.tmux/plugins/tmux-fingers' existiert bereits und i
 [1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/symlinks.zsh][0m Checking/Updated symlinks within /home/cr0c0/dotfiles.
 	/home/cr0c0/.dotfiles [32mok.[0m
 [1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/zsh-deps.zsh][0m Creating dir /home/cr0c0/.dotfiles/deps/zsh.
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/zsh-bd[0m].
-Von https://github.com/ninrod/zsh-bd
- = [aktuell]         master     -> origin/master
-[36mninrod/zsh-bd[0m is already [34mUp-to-date[0m.
+[[32mninrod/zsh-bd[0m] already cloned from [34mhttps://github.com/ninrod/zsh-bd.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/k[0m].
-Von https://github.com/ninrod/k
- = [aktuell]         master     -> origin/master
-[36mninrod/k[0m is already [34mUp-to-date[0m.
+[[32mninrod/k[0m] already cloned from [34mhttps://github.com/ninrod/k.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/docker-zsh-completion[0m].
-Von https://github.com/ninrod/docker-zsh-completion
- = [aktuell]         master     -> origin/master
-[36mninrod/docker-zsh-completion[0m is already [34mUp-to-date[0m.
+[[32mninrod/docker-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/docker-zsh-completion.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/docker-compose-zsh-completion[0m].
-Von https://github.com/ninrod/docker-compose-zsh-completion
- = [aktuell]         master     -> origin/master
-[36mninrod/docker-compose-zsh-completion[0m is already [34mUp-to-date[0m.
+[[32mninrod/docker-compose-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/docker-compose-zsh-completion.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mzsh-users/zsh-completions[0m].
-Von https://github.com/zsh-users/zsh-completions
- = [aktuell]         master     -> origin/master
-[36mzsh-users/zsh-completions[0m is already [34mUp-to-date[0m.
+[[32mzsh-users/zsh-completions[0m] already cloned from [34mhttps://github.com/zsh-users/zsh-completions.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/pass-zsh-completion[0m].
-Von https://github.com/ninrod/pass-zsh-completion
- = [aktuell]         master     -> origin/master
-[36mninrod/pass-zsh-completion[0m is already [34mUp-to-date[0m.
+[[32mninrod/pass-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/pass-zsh-completion.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/gradle-zsh-completion[0m].
-Von https://github.com/ninrod/gradle-zsh-completion
- = [aktuell]         master     -> origin/master
-[36mninrod/gradle-zsh-completion[0m is already [34mUp-to-date[0m.
+[[32mninrod/gradle-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/gradle-zsh-completion.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mzsh-users/zsh-autosuggestions[0m].
-Von https://github.com/zsh-users/zsh-autosuggestions
- = [aktuell]         master     -> origin/master
-[36mzsh-users/zsh-autosuggestions[0m is already [34mUp-to-date[0m.
+[[32mzsh-users/zsh-autosuggestions[0m] already cloned from [34mhttps://github.com/zsh-users/zsh-autosuggestions.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mzsh-users/zsh-syntax-highlighting[0m].
-Von https://github.com/zsh-users/zsh-syntax-highlighting
- = [aktuell]         master     -> origin/master
-[36mzsh-users/zsh-syntax-highlighting[0m is already [34mUp-to-date[0m.
+[[32mzsh-users/zsh-syntax-highlighting[0m] already cloned from [34mhttps://github.com/zsh-users/zsh-syntax-highlighting.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mbronson/vim-visual-star-search[0m].
-Von https://github.com/bronson/vim-visual-star-search
- = [aktuell]         master     -> origin/master
-[36mbronson/vim-visual-star-search[0m is already [34mUp-to-date[0m.
+[[32mbronson/vim-visual-star-search[0m] already cloned from [34mhttps://github.com/bronson/vim-visual-star-search.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mchaoren/vim-wordmotion[0m].
-Von https://github.com/chaoren/vim-wordmotion
- = [aktuell]         master     -> origin/master
-[36mchaoren/vim-wordmotion[0m is already [34mUp-to-date[0m.
+[[32mchaoren/vim-wordmotion[0m] already cloned from [34mhttps://github.com/chaoren/vim-wordmotion.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mervandew/supertab[0m].
-Von https://github.com/ervandew/supertab
- = [aktuell]         master     -> origin/master
-[36mervandew/supertab[0m is already [34mUp-to-date[0m.
+[[32mervandew/supertab[0m] already cloned from [34mhttps://github.com/ervandew/supertab.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mjunegunn/fzf.vim[0m].
-Von https://github.com/junegunn/fzf.vim
- = [aktuell]         master     -> origin/master
-[36mjunegunn/fzf.vim[0m is already [34mUp-to-date[0m.
+[[32mjunegunn/fzf.vim[0m] already cloned from [34mhttps://github.com/junegunn/fzf.vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mjunegunn/vim-easy-align[0m].
-Von https://github.com/junegunn/vim-easy-align
- = [aktuell]         master     -> origin/master
-[36mjunegunn/vim-easy-align[0m is already [34mUp-to-date[0m.
+[[32mjunegunn/vim-easy-align[0m] already cloned from [34mhttps://github.com/junegunn/vim-easy-align.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mkana/vim-textobj-entire[0m].
-Von https://github.com/kana/vim-textobj-entire
- = [aktuell]         master     -> origin/master
-[36mkana/vim-textobj-entire[0m is already [34mUp-to-date[0m.
+[[32mkana/vim-textobj-entire[0m] already cloned from [34mhttps://github.com/kana/vim-textobj-entire.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mkana/vim-textobj-user[0m].
-Von https://github.com/kana/vim-textobj-user
- = [aktuell]         master     -> origin/master
-[36mkana/vim-textobj-user[0m is already [34mUp-to-date[0m.
+[[32mkana/vim-textobj-user[0m] already cloned from [34mhttps://github.com/kana/vim-textobj-user.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/ninscratch-vim[0m].
-Von https://github.com/ninrod/ninscratch-vim
- = [aktuell]         master     -> origin/master
-[36mninrod/ninscratch-vim[0m is already [34mUp-to-date[0m.
+[[32mninrod/ninscratch-vim[0m] already cloned from [34mhttps://github.com/ninrod/ninscratch-vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mterryma/vim-multiple-cursors[0m].
-Von https://github.com/terryma/vim-multiple-cursors
- = [aktuell]         master     -> origin/master
-[36mterryma/vim-multiple-cursors[0m is already [34mUp-to-date[0m.
+[[32mterryma/vim-multiple-cursors[0m] already cloned from [34mhttps://github.com/terryma/vim-multiple-cursors.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mtommcdo/vim-exchange[0m].
-Von https://github.com/tommcdo/vim-exchange
- = [aktuell]         master     -> origin/master
-[36mtommcdo/vim-exchange[0m is already [34mUp-to-date[0m.
+[[32mtommcdo/vim-exchange[0m] already cloned from [34mhttps://github.com/tommcdo/vim-exchange.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mtpope/vim-commentary[0m].
-Von https://github.com/tpope/vim-commentary
- = [aktuell]         master     -> origin/master
-[36mtpope/vim-commentary[0m is already [34mUp-to-date[0m.
+[[32mtpope/vim-commentary[0m] already cloned from [34mhttps://github.com/tpope/vim-commentary.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mtpope/vim-pathogen[0m].
-Von https://github.com/tpope/vim-pathogen
- = [aktuell]         master     -> origin/master
-[36mtpope/vim-pathogen[0m is already [34mUp-to-date[0m.
+[[32mtpope/vim-pathogen[0m] already cloned from [34mhttps://github.com/tpope/vim-pathogen.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mtpope/vim-repeat[0m].
-Von https://github.com/tpope/vim-repeat
- = [aktuell]         master     -> origin/master
-[36mtpope/vim-repeat[0m is already [34mUp-to-date[0m.
+[[32mtpope/vim-repeat[0m] already cloned from [34mhttps://github.com/tpope/vim-repeat.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mtpope/vim-surround[0m].
-Von https://github.com/tpope/vim-surround
- = [aktuell]         master     -> origin/master
-[36mtpope/vim-surround[0m is already [34mUp-to-date[0m.
+[[32mtpope/vim-surround[0m] already cloned from [34mhttps://github.com/tpope/vim-surround.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mvim-scripts/ReplaceWithRegister[0m].
-Von https://github.com/vim-scripts/ReplaceWithRegister
- = [aktuell]         master     -> origin/master
-[36mvim-scripts/ReplaceWithRegister[0m is already [34mUp-to-date[0m.
+[[32mvim-scripts/ReplaceWithRegister[0m] already cloned from [34mhttps://github.com/vim-scripts/ReplaceWithRegister.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mwellle/targets.vim[0m].
-Von https://github.com/wellle/targets.vim
- = [aktuell]         master     -> origin/master
-[36mwellle/targets.vim[0m is already [34mUp-to-date[0m.
+[[32mwellle/targets.vim[0m] already cloned from [34mhttps://github.com/wellle/targets.vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mitchyny/lightline.vim[0m].
-Von https://github.com/itchyny/lightline.vim
- = [aktuell]         master     -> origin/master
-[36mitchyny/lightline.vim[0m is already [34mUp-to-date[0m.
+[[32mitchyny/lightline.vim[0m] already cloned from [34mhttps://github.com/itchyny/lightline.vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mmorhetz/gruvbox[0m].
-Von https://github.com/morhetz/gruvbox
- = [aktuell]         master     -> origin/master
-[36mmorhetz/gruvbox[0m is already [34mUp-to-date[0m.
+[[32mmorhetz/gruvbox[0m] already cloned from [34mhttps://github.com/morhetz/gruvbox.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mjunegunn/rainbow_parentheses.vim[0m].
-Von https://github.com/junegunn/rainbow_parentheses.vim
- = [aktuell]         master     -> origin/master
-[36mjunegunn/rainbow_parentheses.vim[0m is already [34mUp-to-date[0m.
+[[32mjunegunn/rainbow_parentheses.vim[0m] already cloned from [34mhttps://github.com/junegunn/rainbow_parentheses.vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mjlanzarotta/bufexplorer[0m].
-Von https://github.com/jlanzarotta/bufexplorer
- = [aktuell]         master     -> origin/master
-[36mjlanzarotta/bufexplorer[0m is already [34mUp-to-date[0m.
+[[32mjlanzarotta/bufexplorer[0m] already cloned from [34mhttps://github.com/jlanzarotta/bufexplorer.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mfrancoiscabrol/ranger.vim[0m].
-Von https://github.com/francoiscabrol/ranger.vim
- = [aktuell]         master     -> origin/master
-[36mfrancoiscabrol/ranger.vim[0m is already [34mUp-to-date[0m.
+[[32mfrancoiscabrol/ranger.vim[0m] already cloned from [34mhttps://github.com/francoiscabrol/ranger.vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mchr4/nginx.vim[0m].
-Von https://github.com/chr4/nginx.vim
- = [aktuell]         master     -> origin/master
-[36mchr4/nginx.vim[0m is already [34mUp-to-date[0m.
+[[32mchr4/nginx.vim[0m] already cloned from [34mhttps://github.com/chr4/nginx.vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mayu-theme/ayu-vim[0m].
-Von https://github.com/ayu-theme/ayu-vim
- = [aktuell]         master     -> origin/master
-[36mayu-theme/ayu-vim[0m is already [34mUp-to-date[0m.
+[[32mayu-theme/ayu-vim[0m] already cloned from [34mhttps://github.com/ayu-theme/ayu-vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mtpope/vim-unimpaired[0m].
-Von https://github.com/tpope/vim-unimpaired
- = [aktuell]         master     -> origin/master
-[36mtpope/vim-unimpaired[0m is already [34mUp-to-date[0m.
+[[32mtpope/vim-unimpaired[0m] already cloned from [34mhttps://github.com/tpope/vim-unimpaired.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mbriandoll/change-inside-surroundings.vim[0m].
-Von https://github.com/briandoll/change-inside-surroundings.vim
- = [aktuell]         master     -> origin/master
-[36mbriandoll/change-inside-surroundings.vim[0m is already [34mUp-to-date[0m.
+[[32mbriandoll/change-inside-surroundings.vim[0m] already cloned from [34mhttps://github.com/briandoll/change-inside-surroundings.vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mkien/ctrlp.vim[0m].
-Von https://github.com/kien/ctrlp.vim
- = [aktuell]         master     -> origin/master
-[36mkien/ctrlp.vim[0m is already [34mUp-to-date[0m.
+[[32mkien/ctrlp.vim[0m] already cloned from [34mhttps://github.com/kien/ctrlp.vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mvim-airline/vim-airline[0m].
-Von https://github.com/vim-airline/vim-airline
- = [aktuell]         master     -> origin/master
-[36mvim-airline/vim-airline[0m is already [34mUp-to-date[0m.
+[[32mvim-airline/vim-airline[0m] already cloned from [34mhttps://github.com/vim-airline/vim-airline.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mvim-airline/vim-airline-themes[0m].
-Von https://github.com/vim-airline/vim-airline-themes
- = [aktuell]         master     -> origin/master
-[36mvim-airline/vim-airline-themes[0m is already [34mUp-to-date[0m.
+[[32mvim-airline/vim-airline-themes[0m] already cloned from [34mhttps://github.com/vim-airline/vim-airline-themes.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mtomtom/quickfixsigns_vim[0m].
-Von https://github.com/tomtom/quickfixsigns_vim
- = [aktuell]         master     -> origin/master
-[36mtomtom/quickfixsigns_vim[0m is already [34mUp-to-date[0m.
+[[32mtomtom/quickfixsigns_vim[0m] already cloned from [34mhttps://github.com/tomtom/quickfixsigns_vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32msheerun/vim-polyglot[0m].
-Von https://github.com/sheerun/vim-polyglot
- = [aktuell]         master     -> origin/master
-[36msheerun/vim-polyglot[0m is already [34mUp-to-date[0m.
+[[32msheerun/vim-polyglot[0m] already cloned from [34mhttps://github.com/sheerun/vim-polyglot.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mtomtom/tcomment_vim[0m].
-Von https://github.com/tomtom/tcomment_vim
- = [aktuell]         master     -> origin/master
-[36mtomtom/tcomment_vim[0m is already [34mUp-to-date[0m.
+[[32mtomtom/tcomment_vim[0m] already cloned from [34mhttps://github.com/tomtom/tcomment_vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32meditorconfig/editorconfig-vim[0m].
-Von https://github.com/editorconfig/editorconfig-vim
- = [aktuell]         master     -> origin/master
-[36meditorconfig/editorconfig-vim[0m is already [34mUp-to-date[0m.
+[[32meditorconfig/editorconfig-vim[0m] already cloned from [34mhttps://github.com/editorconfig/editorconfig-vim.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mscrooloose/nerdtree[0m].
-Von https://github.com/scrooloose/nerdtree
- = [aktuell]         master     -> origin/master
-[36mscrooloose/nerdtree[0m is already [34mUp-to-date[0m.
+[[32mscrooloose/nerdtree[0m] already cloned from [34mhttps://github.com/scrooloose/nerdtree.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mryanoasis/vim-devicons[0m].
-Von https://github.com/ryanoasis/vim-devicons
- = [aktuell]         master     -> origin/master
-[36mryanoasis/vim-devicons[0m is already [34mUp-to-date[0m.
+[[32mryanoasis/vim-devicons[0m] already cloned from [34mhttps://github.com/ryanoasis/vim-devicons.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mValloric/YouCompleteMe[0m].
-Von https://github.com/Valloric/YouCompleteMe
- = [aktuell]         master     -> origin/master
-[36mValloric/YouCompleteMe[0m is already [34mUp-to-date[0m.
+[[32mValloric/YouCompleteMe[0m] already cloned from [34mhttps://github.com/Valloric/YouCompleteMe.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/gruvbox-theme[0m].
-Von https://github.com/ninrod/gruvbox-theme
- = [aktuell]         master     -> origin/master
-[36mninrod/gruvbox-theme[0m is already [34mUp-to-date[0m.
+[[32mninrod/gruvbox-theme[0m] already cloned from [34mhttps://github.com/ninrod/gruvbox-theme.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/rsynced-melpa[0m].
-Von https://github.com/ninrod/rsynced-melpa
- = [aktuell]           master     -> origin/master
-[36mninrod/rsynced-melpa[0m is already [34mUp-to-date[0m.
+[[32mninrod/rsynced-melpa[0m] already cloned from [34mhttps://github.com/ninrod/rsynced-melpa.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/evil-replace-with-char[0m].
-Von https://github.com/ninrod/evil-replace-with-char
- = [aktuell]         master     -> origin/master
-[36mninrod/evil-replace-with-char[0m is already [34mUp-to-date[0m.
+[[32mninrod/evil-replace-with-char[0m] already cloned from [34mhttps://github.com/ninrod/evil-replace-with-char.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mninrod/evil-string-inflection[0m].
-Von https://github.com/ninrod/evil-string-inflection
- = [aktuell]         master     -> origin/master
-[36mninrod/evil-string-inflection[0m is already [34mUp-to-date[0m.
+[[32mninrod/evil-string-inflection[0m] already cloned from [34mhttps://github.com/ninrod/evil-string-inflection.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mnoctuid/rect-ext.el[0m].
-Von https://github.com/noctuid/rect-ext.el
- = [aktuell]         master     -> origin/master
-[36mnoctuid/rect-ext.el[0m is already [34mUp-to-date[0m.
+[[32mnoctuid/rect-ext.el[0m] already cloned from [34mhttps://github.com/noctuid/rect-ext.el.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32memacs-evil/evil[0m].
-Von https://github.com/emacs-evil/evil
- = [aktuell]         master     -> origin/master
-[36memacs-evil/evil[0m is already [34mUp-to-date[0m.
+[[32memacs-evil/evil[0m] already cloned from [34mhttps://github.com/emacs-evil/evil.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mjaypei/emacs-neotree[0m].
-Von https://github.com/jaypei/emacs-neotree
- = [aktuell]         dev        -> origin/dev
-[36mjaypei/emacs-neotree[0m is already [34mUp-to-date[0m.
+[[32mjaypei/emacs-neotree[0m] already cloned from [34mhttps://github.com/jaypei/emacs-neotree.git[0m
 -------------------
+
 -------------------
-[33mPerforming git status[0m on [[32mseebi/dircolors-solarized[0m].
-Von https://github.com/seebi/dircolors-solarized
- = [aktuell]         master     -> origin/master
-[36mseebi/dircolors-solarized[0m is already [34mUp-to-date[0m.
+[[32mseebi/dircolors-solarized[0m] already cloned from [34mhttps://github.com/seebi/dircolors-solarized.git[0m
 -------------------
 	/home/cr0c0/.lscolors [32mok.[0m
+
 -------------------
-[33mPerforming git status[0m on [[32mMorantron/tmux-fingers[0m].
-Von https://github.com/Morantron/tmux-fingers
- = [aktuell]         master     -> origin/master
-[36mMorantron/tmux-fingers[0m is already [34mUp-to-date[0m.
+[[32mMorantron/tmux-fingers[0m] already cloned from [34mhttps://github.com/Morantron/tmux-fingers.git[0m
 -------------------
