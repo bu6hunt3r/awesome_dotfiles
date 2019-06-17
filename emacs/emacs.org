@@ -86,3 +86,11 @@ Keybindings are:
 - =C-c C-c= Change the root directory.
 - =C-c C-p= Copy a file or a directory.
 
+* Transparent background
+To set bakground transparent, create =~/.emacs=
+and specify 
+#+BEGIN_SRC
+(set-background-color "ARGBBB000000")
+#+END_SRC
+within.
+

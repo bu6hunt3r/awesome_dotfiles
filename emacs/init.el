@@ -17,6 +17,7 @@
 (use-package doom-themes)
 (use-package neotree)
 (use-package org-brain)
+(use-package monokai-theme)
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
@@ -31,8 +32,6 @@
 ;; set gruvbox theme
 ;; (load-theme 'gruvbox t)
 
-;; transparent background color
-(set-background-color "ARGBBB000000")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -44,7 +43,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
+    (monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -64,6 +63,9 @@
 ;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
 ;; may have their own settings.
 (load-theme 'doom-one t)
+
+;; Load monokai theme
+;; (load-theme 'monokai t)
 
 ;; Enable flashing mode-line on errors
 (doom-themes-visual-bell-config)
