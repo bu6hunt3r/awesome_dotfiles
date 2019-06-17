@@ -35,7 +35,7 @@ setw -g mode-bg colour238
 
 # }
 # The statusbar {
-set-window-option -g window-status-current-format '#[bg=blue,fg=cyan,bold]#I#[bg=blue,fg=cyan]:#[fg=colour230]#W#[fg=dim]#F'
+# set-window-option -g window-status-current-format '#[bg=blue,fg=cyan,bold]#I#[bg=blue,fg=cyan]:#[fg=colour230]#W#[fg=dim]#F'
 #set -g status-position bottom
 #set -g status-bg colour234
 #set -g status-fg colour137
