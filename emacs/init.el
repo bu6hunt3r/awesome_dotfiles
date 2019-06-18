@@ -91,3 +91,5 @@
     (ignore-errors (aa2u (point-min) (point-max)))))
 (with-eval-after-load 'org-brain
   (add-hook 'org-brain-after-visualize-hook #'aa2u-org-brain-buffer))
+
+(set-background-color "ARGBBB000000")
