@@ -39,11 +39,11 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("1436d643b98844555d56c59c74004eb158dc85fc55d2e7205f8d9b8c860e177f" default)))
+    ("9d36e7cbea9ab075fa1920275cbde349f5b80c9b901500d296856142b32c7516" "1436d643b98844555d56c59c74004eb158dc85fc55d2e7205f8d9b8c860e177f" default)))
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
+    (ein latex-math-preview monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -51,7 +51,7 @@
  ;; If there is more than one, they won't work right.
  )
 
-(setq org-support-shift-select 'always')
+(setq org-support-shift-select 'always)
 
 ;; Customize doom-theme
 (require 'doom-themes)
@@ -62,16 +62,16 @@
 
 ;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
 ;; may have their own settings.
-(load-theme 'doom-one t)
+;;(load-theme 'doom-one t)
 
 ;; Load monokai theme
-;; (load-theme 'monokai t)
+;;(load-theme 'monokai t)
 
 ;; Enable flashing mode-line on errors
 (doom-themes-visual-bell-config)
 
 ;; Enable custom neotree theme (all-the-icons must be installed!)
-(doom-themes-neotree-config)
+;;(doom-themes-neotree-config)
 ;; or for treemacs users
 (doom-themes-treemacs-config)
 
@@ -91,3 +91,9 @@
     (ignore-errors (aa2u (point-min) (point-max)))))
 (with-eval-after-load 'org-brain
   (add-hook 'org-brain-after-visualize-hook #'aa2u-org-brain-buffer))
+
+
+;;(set-background-color "ARGBBB000000")
+;; set transparency
+(set-frame-parameter (selected-frame) 'alpha '(85 85))
+(add-to-list 'default-frame-alist '(alpha 85 85))
