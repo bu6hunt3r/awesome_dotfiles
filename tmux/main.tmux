@@ -9,6 +9,8 @@ source ~/.tmux.d/theme.tmux
 set-window-option -g window-status-current-format '#[bg=blue,fg=cyan,bold]#I#[bg=blue,fg=cyan]:#[fg=colour230]#W#[fg=dim]#F'
 
 run-shell ~/.tmux/plugins/tmux-fingers/tmux-fingers.tmux
+run-shell ~/git-repos/tmux-battery/battery.tmux
+
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'

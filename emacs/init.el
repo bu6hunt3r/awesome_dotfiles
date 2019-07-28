@@ -43,7 +43,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (ein latex-math-preview monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
+    (company-ghc ghc company-jedi haskell-mode auctex-latexmk ein latex-math-preview monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -97,3 +97,14 @@
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(85 85))
 (add-to-list 'default-frame-alist '(alpha 85 85))
+
+(menu-bar-mode -1)
+
+;; init ghc autocmplete
+(require 'package)
+(add-to-list 'package-archives 
+         '("melpa" . "http://melpa-stable.milkbox.net/packages/"))
+(package-initialize)
+(autoload 'ghc-init "ghc" nil t)
+(autoload 'ghc-debug "ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
