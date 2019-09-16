@@ -1,0 +1,18 @@
+#!/bin/bash
+# ok, dzen2 can be toggled
+# now we need the logic to smartly toggle the padding and the status bar
+
+#if the padding is "0 0 0 0" == hidden, therefore show it
+#and vice versa
+
+PADDING=$( ratpoison -c "set padding")
+SHOW_P="0 0 0 0"
+UNSHOW_P="0 16 0 0"
+
+#change padding and signal dzen
+if [ "$PADDING" == "$SHOW_P" ]
+then
+        pkill -SIGUSR1 dzen && ratpoison -c "set padding $HIDE_P"
+else
+        pkill -SIGUSR1 dzen && ratpoison -c "set padding $SHOW_P"
+fi

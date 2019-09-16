@@ -1,0 +1,54 @@
+# kill old dzen process, start the conky piping to dzen process, set padding, and initially show statusbar
+addhook quit exec killall dzen2
+set padding 0 16 0 0
+#exec conky | dzen2 -ta c -e 'sigusr1=hide;sigusr2=unhide' -h '16' -fn 'inconsolata-g' &
+#exec conky | dzen2 -e 'sigusr1=hide;sigusr2=unhide' -x '2080' -w '1040' -h '16' -ta 'r' -bg '#1B1D1E' -fg '#FFFFFF' -y '0'
+exec conky | dzen2 -e 'sigusr1=hide;sigusr2=unhide' -x '0' -w 3840 -h '16' -ta 'r' -bg '#1B1D1E' -fg '#FFFFFF' -y '0'
+
+# script to smartly toggle dzen --> all logic there
+bind z exec ~/.ratpoison/dzconky.rp
+
+#----Key bindings & unbindings
+
+unbind Return
+
+bind Return only
+bind c exec xfce4-terminal --hide-menubar
+bind d exec dmenu_run  -b -fn '-*-terminus-medium-r-*-*-22-*-*-*-*-*-*-*' -nb '#262626' -nf '#919191' -sb '#262626' -sf '#e1f04e'
+bind D tmpwm dwm
+bind y set padding 0 22 0 0
+bind Y set padding 0 0 0 0 
+bind q quit
+bind I frestore (frame :number 0 :x 0 :y 22 :width 720 :height 878 :screenw 1440 :screenh 900 :window 12582915 :last-access 52 :dedicated 0),(frame :number 1 :x 720 :y 22 :width 720 :height 439 :screenw 1440 :screenh 900 :window 18874375 :last-access 51 :dedicated 0),(frame :number 2 :x 720 :y 461 :width 360 :height 219 :screenw 1440 :screenh 900 :window 8388615 :last-access 50 :dedicated 0),(frame :number 4 :x 720 :y 680 :width 360 :height 220 :screenw 1440 :screenh 900 :window 35651591 :last-access 49 :dedicated 0),(frame :number 3 :x 1080 :y 461 :width 360 :height 439 :screenw 1440 :screenh 900 :window 33554439 :last-access 35 :dedicated 0),
+bind l exec ~/.screenlock
+
+definekey top M-h focusleft
+definekey top M-k focusup
+definekey top M-l focusright
+definekey top M-j focusdown
+definekey top C-M-h exchangeleft
+definekey top C-M-j exchangedown
+definekey top C-M-k exchangeup
+definekey top C-M-l exchangeright
+definekey top M-n next
+definekey top M-p prev
+definekey top M-1 exec rpws 1
+definekey top M-2 exec rpws 2
+definekey top M-3 exec rpws 3
+definekey top M-w fselect
+definekey top M-S-Return exec xfce4-terminal --hide-menubar
+definekey top M-d exec dmenu_run  -b -fn '-*-terminus-medium-r-*-*-22-*-*-*-*-*-*-*' -nb '#262626' -nf '#919191' -sb '#262626' -sf '#e1f04e'
+definekey top M-m focus
+
+#Set the size of borders (window, bar etc)
+set border 1
+set barborder 1
+
+#Set the windows naming style. Can be 'title', 'name' or 'class'.
+set winname title
+
+#background image
+exec feh --bg-scale /home/cr0c0/Bilder/wallpaper.png
+
+#run xscreensaver in background
+exec xscreensaver &
