@@ -1,1 +1,3 @@
 boot/log/*
+!*/emacs/init.el
+deps/

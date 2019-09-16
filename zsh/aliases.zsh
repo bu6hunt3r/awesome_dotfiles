@@ -25,6 +25,9 @@ alias r='~/.dotfiles/install.zsh'
 # tmux
 alias t='~/.dotfile/scripts/tmux/tmux-attach.sh'
 
+# tgdb
+alias tgdb='tmux new gdb -x ~/.tgdbinit'
+
 # grc
 if [[ -z `command grc` ]]; then
     echo "grc is not installed. grc aliases will be ignored."

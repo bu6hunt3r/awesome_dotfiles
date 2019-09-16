@@ -43,7 +43,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (## company-ghc ghc company-jedi haskell-mode auctex-latexmk ein latex-math-preview monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
+    (ac-etags ox-wk ## company-ghc ghc company-jedi haskell-mode auctex-latexmk ein latex-math-preview monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -93,7 +93,9 @@
   (add-hook 'org-brain-after-visualize-hook #'aa2u-org-brain-buffer))
 
 
-;;(set-background-color "ARGBBB000000")
+(if nil 
+  (display-graphic-p)
+    (set-background-color "272728282222"))
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(85 85))
 (add-to-list 'default-frame-alist '(alpha 85 85))
@@ -124,3 +126,29 @@
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
 (add-to-list 'company-backends 'company-ghc)
+
+(load-file "~/.emacs.d/elpa/cheatsheet.el")
+(load-file "~/.emacs.d/cheats.el")
+
+(defun other-window-backward ()
+  "Select the previous window."
+  (interactive)
+  (other-window -1))
+(global-set-key "\C-x\C-p" 'other-window-backward)
+
+;; ansi color codes
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+(add-to-list 'comint-output-filter-functions 'ansi-color-process-output)
+
+;; gdb: Cycle backwards through input history, saving input.
+(eval-after-load "gud"
+  '(progn 
+     (define-key gud-mode-map (kbd "<up>") 'comint-previous-input)
+     (define-key gud-mode-map (kbd "<down>") 'comint-next-input)))
+
+(defun backward-kill-line (arg)
+  "Kill ARG lines backward."
+  (interactive "p")
+  (kill-line (- 1 arg)))
+
+(global-set-key "\C-c u" 'backward-kill-line)
