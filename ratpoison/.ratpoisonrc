@@ -35,7 +35,7 @@ definekey top M-p prev
 definekey top M-1 exec rpws 1
 definekey top M-2 exec rpws 2
 definekey top M-3 exec rpws 3
-definekey top M-w fselect
+definekey top C-w fselect
 definekey top M-S-Return exec xfce4-terminal --hide-menubar
 definekey top M-d exec dmenu_run  -b -fn '-*-terminus-medium-r-*-*-22-*-*-*-*-*-*-*' -nb '#262626' -nf '#919191' -sb '#262626' -sf '#e1f04e'
 definekey top M-m focus

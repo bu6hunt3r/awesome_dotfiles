@@ -43,7 +43,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (ac-etags ox-wk ## company-ghc ghc company-jedi haskell-mode auctex-latexmk ein latex-math-preview monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
+    (rainbow-delimiters slime geiser ac-etags ox-wk ## company-ghc ghc company-jedi haskell-mode auctex-latexmk ein latex-math-preview monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -152,3 +152,6 @@
   (kill-line (- 1 arg)))
 
 (global-set-key "\C-c u" 'backward-kill-line)
+
+;; loading transpose-lines feature (bound to "C-M-up/down")
+(load-file "~/.emacs.d/vendor/transpose-lines.el")
