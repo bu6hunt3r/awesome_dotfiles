@@ -1,3 +1,6 @@
+(when (not package-archive-contents)
+    (package-refresh-contents))
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
@@ -127,8 +130,8 @@
 
 (add-to-list 'company-backends 'company-ghc)
 
-(load-file "~/.emacs.d/elpa/cheatsheet.el")
-(load-file "~/.emacs.d/cheats.el")
+;;(load-file "~/.emacs.d/elpa/cheatsheet.el")
+;;(load-file "~/.emacs.d/cheats.el")
 
 (defun other-window-backward ()
   "Select the previous window."
@@ -154,4 +157,26 @@
 (global-set-key "\C-c u" 'backward-kill-line)
 
 ;; loading transpose-lines feature (bound to "C-M-up/down")
-(load-file "~/.emacs.d/vendor/transpose-lines.el")
+;;(load-file "~/.emacs.d/vendor/transpose-lines.el")
+
+;; mu4e settings
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
+(load-file "/home/cr0c0/.emacs.d/mu4e-settings.el")
+
+;; emojify (useful for telegram)
+(add-hook 'after-init-hook #'global-emojify-mode)
+
+(autoload 'multi-term "multi-term" nil t)
+(autoload 'multi-term-next "multi-term" nil t)
+
+;; (setq multi-term-program "/bin/bash")   ;; use bash
+(setq multi-term-program "/bin/zsh") ;; or use zsh...
+
+;; only needed if you use autopair
+(add-hook 'term-mode-hook
+  #'(lambda () (setq autopair-dont-activate t)))
+
+
+(global-set-key (kbd "C-c t") 'multi-term-next)
+(global-set-key (kbd "C-c T") 'multi-term) ;; create a new one
+
