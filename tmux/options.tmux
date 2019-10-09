@@ -9,6 +9,8 @@ set-option -g default-shell $def_shell
 
 # Set base to 1
 set -g base-index 1
+# Start index of window/pane with 1, because we're humans, not computers
+setw -g pane-base-index 1
 
 # Enable UTF-8 support in status bar
 set -g status on
@@ -20,10 +22,10 @@ set -g history-limit 30000
 set-option -g renumber-windows on
 
 # The modes {
-setw -g clock-mode-colour colour135
-setw -g mode-attr bold
-setw -g mode-fg colour196
-setw -g mode-bg colour238
+#setw -g clock-mode-colour colour135
+#setw -g mode-attr bold
+#setw -g mode-fg colour196
+#setw -g mode-bg colour238
 
 # }
 # The panes {
@@ -62,8 +64,23 @@ setw -g mode-bg colour238
 # }
 # The messages {
 
-set -g message-attr bold
-set -g message-fg colour232
-set -g message-bg colour166
+#set -g message-attr bold
+#set -g message-fg colour232
+#set -g message-bg colour166
 
 # }
+
+# We want to have single prefix key "C-a", usable both for local and remote session
+# we don't want to "C-a" + "a" approach either
+# Idea is to turn off all key bindings and prefix handling on local session,
+# so that all keystrokes are passed to inner/remote session
+
+# see: toggle on/off all keybindings · Issue #237 · tmux/tmux - https://github.com/tmux/tmux/issues/237
+
+bind -T off F12 \
+     set -u prefix \;\
+     set -u key-table \;\
+     set -u status-style \;\
+     set -u window-status-current-style \;\
+     set -u window-status-current-format \;\
+     refresh-client -S

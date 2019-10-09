@@ -119,15 +119,17 @@
     (ignore-errors (aa2u (point-min) (point-max)))))
 (with-eval-after-load 'org-brain
   (add-hook 'org-brain-after-visualize-hook #'aa2u-org-brain-buffer))
-;; 
-;; 
-;; ;;(if nil 
-;; ;;  (display-graphic-p)
-;; ;;    (set-background-color "272728282222"))
-;; ;; set transparency
-;; ;;(set-frame-parameter (selected-frame) 'alpha '(85 85))
-;; ;;(add-to-list 'default-frame-alist '(alpha 85 85))
-;; 
+  
+(if nil 
+  (display-graphic-p)
+  (set-background-color "272728282222")
+
+  ;; set transparency
+  ;;(set-frame-parameter (selected-frame) 'alpha '(85 85))
+  ;;(add-to-list 'default-frame-alist '(alpha 85 85))
+  )
+
+ 
 (menu-bar-mode -1)
 ;; Language hooks
 (add-hook 'after-init-hook 'global-company-mode)
