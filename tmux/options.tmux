@@ -70,7 +70,7 @@ set -g message-bg colour166
 
 # Session is considered to be remote when we ssh into host
 if-shell 'test -n "$SSH_CLIENT"' \
-    'source-file ~/.dotfiles/tmux/tmux.remote.conf'
+    'source-file ~/.dotfiles/tmux/tmux.remote.config'
 
 # see: toggle on/off all keybindings · Issue #237 · tmux/tmux - https://github.com/tmux/tmux/issues/237
 # Also, change some visual styles when window keys are off
