@@ -1,3 +1,10 @@
+;; load alternate keybinds
+(load-file "~/.emacs.d/keybinds.el")
+
+;; loading move-text
+(load-file "~/.emacs.d/move-text.el")
+(move-text-default-bindings)
+	   
 (package-initialize)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
@@ -13,6 +20,13 @@
 
 (require 'use-package)
 (setq use-package-always-ensure t)
+
+;; Cask settings
+(require 'cask "/home/cr0c0/cask/cask.el")
+;; (cask-initialize)
+;; 
+(require 'pallet)
+(pallet-mode t)
 
 ; then define packages you use
 (use-package doom-themes)
@@ -30,6 +44,10 @@
 ;; (package-initialize) 
 ;; ;; load font settings functionality if in GUI mode
 ;; (add-to-list 'load-path "~/.emacs.d")
+
+;; loading cheatsheets
+(require 'cheatsheet)
+(load-file "~/.emacs.d/cheats.el")
 
 ;; theme settings
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
@@ -58,26 +76,27 @@
 ;; ;; set gruvbox theme
 ;; ;; (load-theme 'gruvbox t)
 ;; 
-(custom-set-variables
+;;(custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("9d36e7cbea9ab075fa1920275cbde349f5b80c9b901500d296856142b32c7516" "1436d643b98844555d56c59c74004eb158dc85fc55d2e7205f8d9b8c860e177f" default)))
-'(font-size--current-size size)
-'(font-size--default-size default-size)
-'(inhibit-startup-screen t)
-  '(package-selected-packages
-    (quote
-     (doom-themes use-package rainbow-delimiters slime geiser ac-etags ox-wk ## company-ghc ghc company-jedi haskell-mode auctex-latexmk ein latex-math-preview monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
+ ;;'(custom-safe-themes
+ ;;  (quote
+ ;;   ("9d36e7cbea9ab075fa1920275cbde349f5b80c9b901500d296856142b32c7516" "1436d643b98844555d56c59c74004eb158dc85fc55d2e7205f8d9b8c860e177f" default)))
+ ;; '(font-size--current-size size)
+ ;; '(font-size--default-size default-size)
+ ;; '(inhibit-startup-screen t)
+ ;; '(package-selected-packages
+ ;;   (quote
+ ;;    (doom-themes use-package rainbow-delimiters slime geiser ac-etags ox-wk ## company-ghc ghc company-jedi haskell-mode auctex-latexmk ein latex-math-preview monokai-theme ascii-art-to-unicode helm gruvbox-theme org-brain org htmlize neotree))))
+
 (custom-set-faces
-;; custom-set-faces was added by Custom.
-;; If you edit it by hand, you could mess it up, so be careful.
-;; Your init file should contain only one such instance.
-;; If there is more than one, they won't work right.
-)
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 ;; 
 (setq org-support-shift-select 'always)
 ;; 
@@ -120,14 +139,14 @@
 (with-eval-after-load 'org-brain
   (add-hook 'org-brain-after-visualize-hook #'aa2u-org-brain-buffer))
   
-(if nil 
-  (display-graphic-p)
-  (set-background-color "272728282222")
+;; (if nil 
+ ;;  (display-graphic-p)
+  ;; (set-background-color "272728282222")
 
   ;; set transparency
   ;;(set-frame-parameter (selected-frame) 'alpha '(85 85))
   ;;(add-to-list 'default-frame-alist '(alpha 85 85))
-  )
+  ;;)
 
  
 (menu-bar-mode -1)
@@ -156,9 +175,6 @@
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
 (add-to-list 'company-backends 'company-ghc)
-
-;; loading cheatsheets
-(load-file "~/.emacs.d/cheats.el")
 
 ;; Other window backwards
 (defun other-window-backward ()
@@ -225,9 +241,14 @@
 	(switch-to-buffer (other-buffer))))))
 
 
-;; Cask settings
-(require 'cask "/home/cr0c0/cask/cask.el")
-;; (cask-initialize)
-;; 
-(require 'pallet)
-(pallet-mode t)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(font-size--current-size size)
+ '(font-size--default-size default-size)
+ '(nyan-mode t)
+ '(package-selected-packages
+   (quote
+    (nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
