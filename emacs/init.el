@@ -1,15 +1,29 @@
+
 ;; load alternate keybinds
 (load-file "~/.emacs.d/keybinds.el")
 
 ;; loading move-text
 (load-file "~/.emacs.d/move-text.el")
 (move-text-default-bindings)
-	   
+
 (package-initialize)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives
              '("org" . "http://orgmode.org/elpa/"))
+
+(require 'helm)
+(require 'helm-config)
+;;(load-file "~/.emacs.d/helm-init.el")
+;;(server-start)
+;;(require 'org-protocol)
+
+;;(setq org-capture-templates `(
+;;	("p" "Protocol" entry (file+headline ,(concat org-directory "notes.org") "Inbox")
+;;        "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+;;	("L" "Protocol Link" entry (file+headline ,(concat org-directory "notes.org") "Inbox")
+;;        "* %? [[%:link][%:description]] \nCaptured On: %U")
+;;)
 
 ;; install any packages in jpk-packages, if they are not installed already
 (let ((refreshed nil))
@@ -152,7 +166,7 @@
 (menu-bar-mode -1)
 ;; Language hooks
 (add-hook 'after-init-hook 'global-company-mode)
-;; init ghc autocmplete
+;; init ghc autocomplete
 (require 'package)
 ;; (add-to-list 'package-archives 
 ;;          '("melpa" . "http://melpa-stable.milkbox.net/packages/"))
@@ -160,6 +174,12 @@
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+	      (ggtags-mode 1))))
+(add-hook 'dired-mode-hook 'ggtags-mode)
 ;; 
 ;; No delay in showing suggestions.
 (setq company-idle-delay 0)
@@ -251,4 +271,14 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
+    (helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
+
+;; Set file as ro / expose warning if file is symlink.
+(defun read-only-if-symlink ()
+  (if (file-symlink-p buffer-file-name)
+      (progn
+	(setq buffer-read-only t)
+	(message "File is a symlink!"))))
+
+(add-hook 'find-file-hooks 'read-only-if-symlink)
+  
