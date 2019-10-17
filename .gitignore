@@ -1,4 +1,10 @@
 boot/log/*
 emacs/*
 !/emacs/init.el
+!/emacs/Cask
+!/emacs/cheats.el
+!/emacs/helm-init.el
+!/emacs/keybinds.el
+!/emacs/move-text.el
+!/emacs/mu4e-settings.el
 deps/
