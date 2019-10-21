@@ -7,14 +7,29 @@
 (move-text-default-bindings)
 
 (package-initialize)
+
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives
              '("org" . "http://orgmode.org/elpa/"))
 
+(defun packages-require (&rest packs)
+  "Install and load a package. If the package is not available
+  installs it automatically."
+  (mapc (lambda (package)
+	  (unless (package-installed-p package)
+	          (package-install package)
+		  ))
+	packs
+	))
+
 (require 'helm)
 (require 'helm-config)
-;;(load-file "~/.emacs.d/helm-init.el")
+(require 'paredit)
+(require 'rainbow-delimiters)
+(require 'company)
+
+(load-file "~/.emacs.d/helm-init.el")
 ;;(server-start)
 ;;(require 'org-protocol)
 
@@ -180,7 +195,33 @@
 	    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
 	      (ggtags-mode 1))))
 (add-hook 'dired-mode-hook 'ggtags-mode)
-;; 
+
+;; paredit hooks
+(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+
+(add-hook 'emacs-lisp-mode-hook
+	  (lambda ()
+	    (paredit-mode t)
+	    (rainbow-delimiters-mode t)
+	    (show-paren-mode 1)
+	    ))
+
+(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+(add-hook 'ielm-mode-hook #'enable-paredit-mode)
+(add-hook 'lisp-mode-hook #'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook
+	  (lambda ()
+	    (paredit-mode t)
+	    (rainbow-delimiters-mode t)
+	    (show-paren-mode 1)
+	    ))
+
+(add-hook 'scheme-mode-hook #'enable-paredit-mode)
+
+;; ruby inferior mode
+(autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
+(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+
 ;; No delay in showing suggestions.
 (setq company-idle-delay 0)
 ; Show suggestions after entering one character.
@@ -271,7 +312,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
+    (inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
 
 ;; Set file as ro / expose warning if file is symlink.
 (defun read-only-if-symlink ()
@@ -281,4 +322,5 @@
 	(message "File is a symlink!"))))
 
 (add-hook 'find-file-hooks 'read-only-if-symlink)
-  
+
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
