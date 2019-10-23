@@ -1,4 +1,4 @@
-
+(require 'cl)
 ;; load alternate keybinds
 (load-file "~/.emacs.d/keybinds.el")
 
@@ -125,7 +125,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(whitespace-tab ((t (:foreground "#636363")))))
 ;; 
 (setq org-support-shift-select 'always)
 ;; 
@@ -312,7 +312,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
+    (merlin-eldoc iedit merlin ocp-indent elf-mode smart-tabs-mode imenu-list inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
 
 ;; Set file as ro / expose warning if file is symlink.
 (defun read-only-if-symlink ()
@@ -324,3 +324,103 @@
 (add-hook 'find-file-hooks 'read-only-if-symlink)
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+;; imenu-list kbd
+(global-set-key (kbd "C-'") #'imenu-list-smart-toggle)
+
+;; smartTabs langs
+(smart-tabs-insinuate 'c 'c++ 'javascript 'java 'python 'ruby)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; insert date and/or time
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun date-time ()
+  "Insert date and time"
+  (interactive)
+  (insert  (format-time-string "%d.%m.%Y %H:%M:%S")))
+
+(defun date ()
+  "Insert date"
+  (interactive)
+  (insert  (format-time-string "%d.%m.%Y")))
+
+(defun time ()
+  "Insert time"
+  (interactive)
+  (insert  (format-time-string "%H:%M:%S")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; insert line below/above
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun my/insert-line-below (times)
+  (interactive "p")
+  (move-end-of-line 1)
+  (newline times))
+(global-set-key (kbd "M-n") #'my/insert-line-below)
+
+(defun my/insert-line-above (times)
+  (interactive "p")
+  (newline times)
+  (move-beginning-of-line (+ (* -1 times) 1) ))
+(global-set-key (kbd "M-p") #'my/insert-line-below)
+
+;; elf mode
+(add-to-list 'auto-mode-alist '("\\.\\(?:a\\|so\\)\\'" . elf-mode))
+
+;; Delete section mode
+(delete-selection-mode 1)
+
+; START TABS CONFIG
+;; Create a variable for our preferred tab width
+(setq custom-tab-width 2)
+
+;; Two callable functions for enabling/disabling tabs in Emacs
+(defun disable-tabs () (setq indent-tabs-mode nil))
+(defun enable-tabs  ()
+  (local-set-key (kbd "TAB") 'tab-to-tab-stop)
+  (setq indent-tabs-mode t)
+  (setq tab-width custom-tab-width))
+
+;; Hooks to Enable Tabs
+(add-hook 'prog-mode-hook 'enable-tabs)
+;; Hooks to Disable Tabs
+(add-hook 'lisp-mode-hook 'disable-tabs)
+(add-hook 'emacs-lisp-mode-hook 'disable-tabs)
+
+;; Language-Specific Tweaks
+(setq-default python-indent-offset custom-tab-width) ;; Python
+(setq-default js-indent-level custom-tab-width)      ;; Javascript
+
+;; Making electric-indent behave sanely
+(setq-default electric-indent-inhibit t)
+
+;; Make the backspace properly erase the tab instead of
+;; removing 1 space at a time.
+(setq backward-delete-char-untabify-method 'hungry)
+
+;; (OPTIONAL) Shift width for evil-mode users
+;; For the vim-like motions of ">>" and "<<".
+(setq-default evil-shift-width custom-tab-width)
+
+;; WARNING: This will change your life
+;; (OPTIONAL) Visualize tabs as a pipe character - "|"
+;; This will also show trailing characters as they are useful to spot.
+(setq whitespace-style '(face tabs tab-mark trailing))
+
+(setq whitespace-display-mappings
+  '((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
+(global-whitespace-mode) ; Enable whitespace mode everywhere
+
+(global-set-key (kbd "C->") 'indent-rigidly-right-to-tab-stop)
+(global-set-key (kbd "C-<") 'indent-rigidly-left-to-tab-stop)
+
+;END TABS CONFIG
+
+; LINE NUMBERS CONFIG
+(global-display-line-numbers-mode)
+(set-face-background 'line-number "#000000")
+; END LINE NUMBERS CONFIG
+
+; IMENU RESCAN
+(setq imenu-auto-rescan t)
+; IMENU RESCAN END
