@@ -91,6 +91,13 @@
 (define-key global-map (kbd "M--") 'font-size-decrease)
 (define-key global-map (kbd "M-0") 'font-size-default)
 
+;; It searches both headings and contents of entries in Org buffers, and
+;; it displays entries that match all search terms, whether the terms
+;; appear in the heading, the contents, or both.
+(defun helm-org-rifle-brain ()
+  "Rifle-files in `org-brain-path'."
+  (interactive)
+  (helm-org-rifle-directories (list org-brain-path)))
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
@@ -312,7 +319,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (flycheck org yasnippet nand2tetris merlin-eldoc iedit merlin ocp-indent elf-mode smart-tabs-mode imenu-list inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
+    (helm-org-rifle flycheck org yasnippet nand2tetris merlin-eldoc iedit merlin ocp-indent elf-mode smart-tabs-mode imenu-list inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
 
 ;; Set file as ro / expose warning if file is symlink.
 (defun read-only-if-symlink ()
@@ -424,3 +431,7 @@
 ; IMENU RESCAN
 (setq imenu-auto-rescan t)
 ; IMENU RESCAN END
+
+; SETTING CUSTOM NAND2TETRIS-CORE-BASE-DIR
+(setq nand2tetris-core-base-dir "~/git-repos/nand2tetris/")
+; END
