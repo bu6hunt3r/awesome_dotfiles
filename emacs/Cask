@@ -33,6 +33,8 @@
 (depends-on "epl")
 (depends-on "erlang")
 (depends-on "f")
+(depends-on "flycheck")
+(depends-on "flycheck-tip")
 (depends-on "geiser")
 (depends-on "ggtags")
 (depends-on "ghc")
