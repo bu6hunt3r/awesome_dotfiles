@@ -435,3 +435,24 @@
 ; SETTING CUSTOM NAND2TETRIS-CORE-BASE-DIR
 (setq nand2tetris-core-base-dir "~/git-repos/nand2tetris/")
 ; END
+
+; DEFINING INCREMENT NUMBER
+(defun increment-number-at-point ()
+  (interactive)
+  (skip-chars-backward "0-9")
+  (or (looking-at "[0-9]+")
+      (error "No number at point"))
+  (replace-match (number-to-string (1+ (string-to-number (match-string 0))))))
+; END
+
+; DEFINING DECREMENT NUMBER
+(defun decrement-number-at-point ()
+  (interactive)
+  (skip-chars-backward "0-9")
+  (or (looking-at "[0-9]+")
+      (error "No number at point")
+  (replace-match (number-to-string) (- (string-to-number (match-string 0)) 1))))
+; END
+
+(global-set-key (kbd "C-c +") 'increment-number-at-point)
+(global-set-key (kbd "C-c -") 'decrement-number-at-point)
