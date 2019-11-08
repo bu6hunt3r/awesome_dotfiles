@@ -41,3 +41,5 @@ source ~/.zsh.d/fzf.zsh
 
 source ~/.zsh.d/syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# ctf-tools: PATH setup
+export PATH=/home/cr0c0/dev/ctf-tools/bin:$PATH

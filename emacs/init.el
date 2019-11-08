@@ -433,7 +433,7 @@
 ; IMENU RESCAN END
 
 ; SETTING CUSTOM NAND2TETRIS-CORE-BASE-DIR
-(setq nand2tetris-core-base-dir "~/git-repos/nand2tetris/")
+(setq nand2tetris-core-base-dir "~/dev/nand2tetris/")
 ; END
 
 ; DEFINING INCREMENT NUMBER

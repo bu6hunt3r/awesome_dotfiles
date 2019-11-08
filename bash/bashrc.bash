@@ -111,3 +111,5 @@ LAST_STEP=~/.options/last-step.zsh
 # }}}
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# ctf-tools: PATH setup
+export PATH=/home/cr0c0/dev/ctf-tools/bin:$PATH
