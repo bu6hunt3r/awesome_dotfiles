@@ -97,3 +97,4 @@
 (depends-on "visual-fill-column")
 (depends-on "websocket")
 (depends-on "yasnippet")
+(depends-on "yasnippet-lean")

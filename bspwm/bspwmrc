@@ -2,6 +2,7 @@
 
 
 sxhkd &
+xscreensaver &
 
 # run the xrandr command if an external monitor is connected to the
 # laptop.  This must be executed before the polybar command, so that

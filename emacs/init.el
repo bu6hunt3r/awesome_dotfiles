@@ -82,6 +82,8 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme `tron-legacy t)
 
+(set-background-color "#033f01a90ccc")
+
 ;; font settings
 (set-default-font "IBM 3270 Medium")
 (load-file "~/.emacs.d/font-size.el")
@@ -456,3 +458,4 @@
 
 (global-set-key (kbd "C-c +") 'increment-number-at-point)
 (global-set-key (kbd "C-c -") 'decrement-number-at-point)
+
