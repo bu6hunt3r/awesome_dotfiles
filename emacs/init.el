@@ -1,23 +1,23 @@
-(require 'cl)
-;; load alternate keybinds
-(load-file "~/.emacs.d/keybinds.el")
+    (require 'cl)
+    ;; load alternate keybinds
+    (load-file "~/.emacs.d/keybinds.el")
 
-;; loading move-text
-(load-file "~/.emacs.d/move-text.el")
-(move-text-default-bindings)
+    ;; loading move-text
+    (load-file "~/.emacs.d/move-text.el")
+    (move-text-default-bindings)
 
-(package-initialize)
+    (package-initialize)
 
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives
-             '("org" . "http://orgmode.org/elpa/"))
+    (add-to-list 'package-archives
+                 '("melpa" . "http://melpa.org/packages/"))
+    (add-to-list 'package-archives
+                 '("org" . "http://orgmode.org/elpa/"))
 
-(defun packages-require (&rest packs)
-  "Install and load a package. If the package is not available
-  installs it automatically."
-  (mapc (lambda (package)
-	  (unless (package-installed-p package)
+    (defun packages-require (&rest packs)
+      "Install and load a package. If the package is not available
+      installs it automatically."
+      (mapc (lambda (package)
+        (unless (package-installed-p package)
 	          (package-install package)
 		  ))
 	packs
@@ -81,8 +81,6 @@
 ;; theme settings
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme `tron-legacy t)
-
-(set-background-color "#033f01a90ccc")
 
 ;; font settings
 (set-default-font "IBM 3270 Medium")
@@ -274,8 +272,8 @@
 ;; ;;(load-file "~/.emacs.d/vendor/transpose-lines.el")
 ;; 
 ;; mu4e settings
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
-(load-file "/home/cr0c0/.emacs.d/mu4e-settings.el")
+;; (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
+;; (load-file "/home/cr0c0/.emacs.d/mu4e-settings.el")
 
 ;; emojify (useful for telegram)
 (add-hook 'after-init-hook #'global-emojify-mode)
@@ -426,8 +424,8 @@
 ;END TABS CONFIG
 
 ; LINE NUMBERS CONFIG
-(global-display-line-numbers-mode)
-(set-face-background 'line-number "#000000")
+;; (global-display-line-numbers-mode)
+;; (set-face-background 'line-number "#000000")
 ; END LINE NUMBERS CONFIG
 
 ; IMENU RESCAN
@@ -459,3 +457,24 @@
 (global-set-key (kbd "C-c +") 'increment-number-at-point)
 (global-set-key (kbd "C-c -") 'decrement-number-at-point)
 
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+(require 'linum-highlight-current-line-number)
+(setq linum-format 'linum-highlight-current-line-number)
+(set-face-background 'line-number "#033f01a90ccc")
+
+(set-background-color "#033f01a90ccc")
+
+(setq tool-bar-mode nil)
+(toggle-scroll-bar -1) 
+(tool-bar-mode -1) 
+
+(custom-set-faces
+   '(mode-line ((t (:box (:line-width 2 :color "#6A839"))))))
+
+(add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode))
+(nyan-mode)
+(linum-mode)
