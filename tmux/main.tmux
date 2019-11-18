@@ -17,3 +17,9 @@ set -g @plugin 'tmux-plugins/tpm'
 
 # Source fingers key bnidings
 source ~/.tmux.d/fingers.tmux
+
+set-option update-environment $HOME
+
+set-option -g default-shell "/bin/zsh"
+
+set-option -g default-command "exec /bin/zsh"
