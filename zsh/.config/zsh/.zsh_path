@@ -1,0 +1,13 @@
+# Python
+PATH=/usr/local/bin:$PATH
+PATH="$HOME/.pyenv/bin:$PATH"
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export WORKON_HOME=~/.virtual_envs
+
+# Brew
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+
+# PATH
+PATH="$HOME/.local/bin:$PATH"
+
+export PATH
