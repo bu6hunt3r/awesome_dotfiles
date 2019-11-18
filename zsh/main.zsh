@@ -42,20 +42,22 @@ source ~/.zsh.d/fzf.zsh
 source ~/.zsh.d/syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-echo -e "\033[1;33m==== Loading aliases ====\033[0m"
+VERBOSE=1
+
+if [[ $VERBOSE -eq 1 ]]; then
+		echo -e "\033[1;33m==== Loading aliases ====\033[0m"
+fi
+
 lsd_installed=$(which lsd &>/dev/null)
 if [[ -z $lsd_installed ]]; then
 		lsd_prompt="\033[1;32m- [√] lsd installed...\033[0m"
-		echo "alias ls='lsd'"  >> ~/.zsh.d/aliases.zsh
-		echo "alias l='ls -l'" >> ~/.zsh.d/aliases.zsh
-		echo "alias la='ls -a'"  >> ~/.zsh.d/aliases.zsh
-		echo "alias lla='ls -la'" >> ~/.zsh.d/aliases.zsh
-		echo "alias lt='ls --tree'" >> ~/.zsh.d/aliases.zsh
+		source "$HOME/.config/zsh/.lsd_aliases"
 else
 		lsd_prompt="\033[1;31m- [ ] lsd not installed...(also check for patched font -> https://github.com/ryanoasis/nerd-fonts/blob/master/readme.md)\033[0m"
 fi
-
-echo -e "$lsd_prompt"
+if [[ $VERBOSE -eq 1 ]]; then
+		echo -e "$lsd_prompt"
+fi
 
 # load diverse aliases
 source ~/.zsh.d/aliases.zsh
@@ -63,19 +65,26 @@ source ~/.zsh.d/aliases.zsh
 # load tmux aliases
 source ~/.config/zsh/.tmux_aliases
 if [[ $? -eq 0 ]]; then
-		echo -e "\033[1;32m- [√] tmux aliases loaded...\033[0m"
+		if [[ $VERBOSE -eq 1 ]]; then
+				echo -e "\033[1;32m- [√] tmux aliases loaded...\033[0m"
+		fi
 else
-		echo -e "\033[1;31m- [ ] tmux aliases not loaded...\033[0m"
+		if [[ $VERBOSE -eq 1 ]]; then
+				echo -e "\033[1;31m- [ ] tmux aliases not loaded...\033[0m"
+		fi
 fi
 
 # load virtualenv aliases
 source ~/.config/zsh/.python_functions
 if [[ $? -eq 0 ]]; then
-		echo -e "\033[1;32m- [√] virtualenv aliases loaded...\033[0m"
+		if [[ $VERBOSE -eq 1 ]]; then
+				echo -e "\033[1;32m- [√] virtualenv aliases loaded...\033[0m"
+		fi
 else
-		echo -e "\033[1;31m- [ ] virtualenv aliases not loaded...\033[0m"
+		if [[ $VERBOSE -eq 1 ]]; then
+				echo -e "\033[1;31m- [ ] virtualenv aliases not loaded...\033[0m"
+		fi
 fi
-
 
 case "$(uname -s)" in
     Linux)
@@ -88,27 +97,52 @@ case "$(uname -s)" in
 		;;
 esac
 
-echo -e "$virtualenvwrapper_prompt"
+if [[ $VERBOSE -eq 1 ]]; then
+		echo -e "$virtualenvwrapper_prompt"
+fi
 
-echo ""
-echo "\033[1;33m==== Loading zsh's config files (stow actions) ====\033[0m"
+if [[ $VERBOSE -eq 1 ]]; then
+		echo ""
+		echo "\033[1;33m==== Loading zsh's config files (stow actions) ====\033[0m"
+fi
+
 source "$HOME/.config/zsh/.zsh_path"
 if [ $? -eq 0 ]; then
-		echo -e "\033[1;32m- [√] loaded ~/.config/zsh/.zsh_path...(check within ~/.zshrc)\033[0m"
+		if [[ $VERBOSE -eq 1 ]]; then
+				echo -e "\033[1;32m- [√] loaded ~/.config/zsh/.zsh_path...(check within ~/.zshrc)\033[0m"
+		fi
 else
-		echo -e "\033[1;31m- [ ] did not load ~/.config/zsh/.zsh_path...something went wrong...(check within ~/.zshrc)\033[0m"
+		if [[ $VERBOSE -eq 1 ]]; then
+				echo -e "\033[1;31m- [ ] did not load ~/.config/zsh/.zsh_path...something went wrong...(check within ~/.zshrc)\033[0m"
+		fi
 fi
 
 # General checks
-echo ""
-echo -e "\033[1;33m==== General checks ====\033[0m"
+if [[ $VERBOSE -eq 1 ]]; then
+		echo ""
+		echo -e "\033[1;33m==== General checks ====\033[0m"
+fi
+
 brew_installed=$(which brew &>/dev/null)
 if [[ -z $brew_installed ]]; then
 		brew_prompt="\033[1;32m- [√] brew installed...\033[0m"
 else
-		brew_prompt="\033[1;31m- [ ] brew not installed...\033[0m"
+	brew_prompt="\033[1;31m- [ ] brew not installed...\033[0m"
 fi
-echo -e "$brew_prompt"
+
+if [[ $VERBOSE -eq 1 ]]; then
+	echo -e "$brew_prompt"
+fi
+
+screensaver_installed=$(which xscreensaver &>/dev/null)
+if [[ -z $screensaver_installed ]]; then
+                screensaver_prompt="\033[1;32m- [√] xscreensaver installed...\033[0m"
+else
+                screensaver_prompt="\033[1;31m- [ ] xscreensaver not installed...\033[0m"
+fi
+if [[ $VERBOSE -eq 1 ]]; then
+	echo -e "$screensaver_prompt"
+fi
 
 tig_installed=$(which tig &>/dev/null)
 if [[ -z $tig_installed ]]; then
@@ -116,7 +150,9 @@ if [[ -z $tig_installed ]]; then
 else
 		tig_prompt="\033[1;31m- [ ] tig not installed...\033[0m"
 fi
-echo -e "$tig_prompt"
+if [[ $VERBOSE -eq 1 ]]; then
+	echo -e "$tig_prompt"
+fi
 
 
 export ZSH_LOADED=1

@@ -53,6 +53,9 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# lock screen
+bindsym $mod+Alt+l xscreensaver & ; xscreensaver-command -lock
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
