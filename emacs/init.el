@@ -81,6 +81,7 @@
 ;; theme settings
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme `tron-legacy t)
+(set-background-color "#033f01a90ccc")
 
 ;; font settings
 (set-default-font "IBM 3270 Medium")
@@ -108,6 +109,7 @@
 ;; set neotree key binding
 (require 'neotree)
 (global-set-key [f12] 'neotree-toggle)
+(setq-default neo-show-hidden-files t)
 ;; 
 ;; ;; set gruvbox theme
 ;; ;; (load-theme 'gruvbox t)
@@ -132,6 +134,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(mode-line ((t (:box (:line-width 2 :color "#6A839")))))
  '(whitespace-tab ((t (:foreground "#636363")))))
 ;; 
 (setq org-support-shift-select 'always)
@@ -466,15 +469,14 @@
 (setq linum-format 'linum-highlight-current-line-number)
 (set-face-background 'line-number "#033f01a90ccc")
 
-(set-background-color "#033f01a90ccc")
-
 (setq tool-bar-mode nil)
 (toggle-scroll-bar -1) 
 (tool-bar-mode -1) 
 
-(custom-set-faces
-   '(mode-line ((t (:box (:line-width 2 :color "#6A839"))))))
+
 
 (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode))
 (nyan-mode)
 (linum-mode)
+
+(set-background-color "#033f01a90ccc")

@@ -42,7 +42,7 @@ source ~/.zsh.d/fzf.zsh
 source ~/.zsh.d/syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-VERBOSE=1
+#VERBOSE=1
 
 if [[ $VERBOSE -eq 1 ]]; then
 		echo -e "\033[1;33m==== Loading aliases ====\033[0m"

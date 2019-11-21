@@ -1,6 +1,7 @@
 boot/log/*
 emacs/*
 !/emacs/init.el
+!/emacs/lisp/*.el
 !/emacs/Cask
 !/emacs/cheats.el
 !/emacs/helm-init.el
