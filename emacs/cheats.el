@@ -366,3 +366,43 @@
 (cheatsheet-add :group 'VersionControl
 		:key "C-x v ="
  		:description "changes you've made to the current files")
+
+(cheatsheet-add :group 'Crux
+                :key "C-k"
+                :description "crux-smart-kill-line")
+(cheatsheet-add :group 'Crux
+                :key "C-x C-u"
+                :description "crux-upcase-region")
+(cheatsheet-add :group 'Crux
+                :key "C-S-RET"
+                :description "crux-smart-open-line-above")
+(cheatsheet-add :group 'Crux
+                :key "C-c n"
+                :description "crux-cleanup-buffer-or-region")
+(cheatsheet-add :group 'Crux
+                :key "C-c f"
+                :description "crux-recentf-find-file")
+(cheatsheet-add :group 'Crux
+                :key "C-c u"
+                :description "crux-view-url")
+(cheatsheet-add :group 'Crux
+                :key "C-c e"
+                :description "crux-eval-and-replace")
+(cheatsheet-add :group 'Crux
+                :key "C-c D"
+                :description "crux-delete-buffer-and-file")
+(cheatsheet-add :group 'Crux
+                :key "C-c M-d"
+                :description "crux-duplicate-and-comment-current-line-or-region")
+(cheatsheet-add :group 'Crux
+                :key "C-c k"
+                :description "crux-kill-other-buffers")
+(cheatsheet-add :group 'Crux
+                :key "C-x C-u"
+                :description "crux-upcase-region")
+(cheatsheet-add :group 'Crux
+                :key "C-x C-l"
+                :description "crux-downcase-region")
+(cheatsheet-add :group 'Crux
+                :key "C-x M-c"
+                :description "crux-capitalize-region")

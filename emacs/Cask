@@ -21,6 +21,7 @@
 (depends-on "company-jedi")
 (depends-on "concurrent")
 (depends-on "counsel")
+(depends-on "crux")
 (depends-on "ctable")
 (depends-on "dash")
 (depends-on "deferred")
