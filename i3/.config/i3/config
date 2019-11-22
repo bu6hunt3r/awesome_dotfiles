@@ -54,8 +54,9 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec rofi -lines 8 -show run -theme lb -font "IBM 3270 14"
-bindsym $mod+Shift+w exec rofi -lines 8 -show window -theme lb -font "IBM 3270 14"
+# bindsym $mod+d exec rofi -lines 8 -show run -theme lb -font "IBM 3270 14"
+bindsym $mod+d exec rofi -lines 8 -show run -theme lb -font "Zero Threes Regular 14"
+bindsym $mod+Shift+w exec rofi -lines 8 -show window -theme lb -font "Zero Threes Regular 14"
 
 # change focus
 bindsym $mod+h focus left
