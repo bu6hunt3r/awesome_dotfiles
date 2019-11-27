@@ -7,7 +7,6 @@ build_prompt_char() {
     echo -n "$prompt_char"
 }
 # default: showing whoami@hostname without truncation
-PROMPT="%F{blue}%1~%f %F{cyan}%n%f%F{red}@%f%F{yellow}%m%f $(build_prompt_char) "
 
 PROMPT_INFO_LEVEL=$SHELL_PROMPT_INFO_LEVEL
 
@@ -21,4 +20,8 @@ elif [[ "${PROMPT_INFO_LEVEL}" == "1"  ]]; then
   PROMPT="%F{blue}%13<...<%1~%<<%f %F{red}@%f%F{yellow}%m%f $(build_prompt_char) "
 elif [[ "${PROMPT_INFO_LEVEL}" == "2"  ]]; then
   PROMPT="%F{blue}%13<...<%1~%<<%f %F{cyan}%n%f%F{red}@%f%F{yellow}%m%f $(build_prompt_char) "
+fi
+
+if [[ -f $HOME/.options/shell-options.zsh ]]; then
+    source $HOME/.options/shell-options.zsh
 fi

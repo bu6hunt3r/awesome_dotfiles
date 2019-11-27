@@ -81,9 +81,11 @@
 ;; theme settings
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme `tron-legacy t)
+(set-background-color "#033f01a90ccc")
 
 ;; font settings
-(set-default-font "IBM 3270 Medium")
+(set-default-font "IBM 3270 Narrow")
+;; (set-default-font "IBM 3270 Narrow")
 (load-file "~/.emacs.d/font-size.el")
 (require 'font-size)
 (font-size-init 14)
@@ -108,6 +110,7 @@
 ;; set neotree key binding
 (require 'neotree)
 (global-set-key [f12] 'neotree-toggle)
+(setq-default neo-show-hidden-files t)
 ;; 
 ;; ;; set gruvbox theme
 ;; ;; (load-theme 'gruvbox t)
@@ -132,6 +135,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(mode-line ((t (:box (:line-width 2 :color "#6A839")))))
  '(whitespace-tab ((t (:foreground "#636363")))))
 ;; 
 (setq org-support-shift-select 'always)
@@ -319,7 +323,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (helm-org-rifle flycheck org yasnippet nand2tetris merlin-eldoc iedit merlin ocp-indent elf-mode smart-tabs-mode imenu-list inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
+    (lean-mode elpy magit crux helm-org-rifle flycheck org yasnippet nand2tetris merlin-eldoc iedit merlin ocp-indent elf-mode smart-tabs-mode imenu-list inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
 
 ;; Set file as ro / expose warning if file is symlink.
 (defun read-only-if-symlink ()
@@ -379,7 +383,7 @@
 
 ; START TABS CONFIG
 ;; Create a variable for our preferred tab width
-(setq custom-tab-width 2)
+(setq custom-tab-width 4)
 
 ;; Two callable functions for enabling/disabling tabs in Emacs
 (defun disable-tabs () (setq indent-tabs-mode nil))
@@ -466,15 +470,14 @@
 (setq linum-format 'linum-highlight-current-line-number)
 (set-face-background 'line-number "#033f01a90ccc")
 
-(set-background-color "#033f01a90ccc")
-
 (setq tool-bar-mode nil)
 (toggle-scroll-bar -1) 
 (tool-bar-mode -1) 
 
-(custom-set-faces
-   '(mode-line ((t (:box (:line-width 2 :color "#6A839"))))))
+
 
 (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode))
 (nyan-mode)
 (linum-mode)
+
+(set-background-color "#033f01a90ccc")
