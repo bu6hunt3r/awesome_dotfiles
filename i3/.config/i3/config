@@ -203,6 +203,12 @@ client.background       #F8F8F2
 workspace 1 output HDMI-0
 workspace 2 output VGA-0
 
+# Some windows need special treatment
+for_window [class="eu4" instance="eu4"] floating enable, border none, gaps inner 0
+
+# Always put steam on workspace 9
+assign [class="Steam"] 9
+
 bindsym $mod+Delete exec ~/.config/i3/lock.sh
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

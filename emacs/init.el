@@ -323,7 +323,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (crux helm-org-rifle flycheck org yasnippet nand2tetris merlin-eldoc iedit merlin ocp-indent elf-mode smart-tabs-mode imenu-list inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
+    (lean-mode elpy magit crux helm-org-rifle flycheck org yasnippet nand2tetris merlin-eldoc iedit merlin ocp-indent elf-mode smart-tabs-mode imenu-list inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags))))
 
 ;; Set file as ro / expose warning if file is symlink.
 (defun read-only-if-symlink ()
@@ -383,7 +383,7 @@
 
 ; START TABS CONFIG
 ;; Create a variable for our preferred tab width
-(setq custom-tab-width 2)
+(setq custom-tab-width 4)
 
 ;; Two callable functions for enabling/disabling tabs in Emacs
 (defun disable-tabs () (setq indent-tabs-mode nil))
