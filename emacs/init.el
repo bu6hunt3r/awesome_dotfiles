@@ -321,11 +321,16 @@
  '(auth-source-save-behavior nil)
  '(font-size--current-size size)
  '(font-size--default-size default-size)
+ '(nand2tetris-core-base-dir "~/dev/nand2tetris" t)
  '(nyan-mode t)
  '(package-selected-packages
    (quote
+<<<<<<< HEAD
     (try ace-window which-key lean-mode elpy magit crux helm-org-rifle flycheck org yasnippet nand2tetris merlin-eldoc iedit merlin ocp-indent elf-mode smart-tabs-mode imenu-list inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags)))
  '(send-mail-function (quote smtpmail-send-it))
+=======
+    (which-key edts company-irony-c-headers dockerfile-mode lean-mode elpy magit crux helm-org-rifle flycheck org yasnippet nand2tetris merlin-eldoc iedit merlin ocp-indent elf-mode smart-tabs-mode imenu-list inf-ruby chruby seeing-is-believing ruby-electric helm-ag helm-projectile paredit ssh-tunnels helm-core helm-gtags ggtags nyan-mode use-package telega srcery-theme slime rainbow-delimiters pallet ox-wk org-brain nord-theme neotree monokai-theme latex-math-preview julia-mode json-mode helm geiser emojify ein doom-themes company-jedi company-irony company-ghc company-erlang cheatsheet auctex ascii-art-to-unicode all-the-icons-gnus ac-etags)))
+>>>>>>> 5f46c2280e8789affd8cdcb9f1e44c191150ae5f
  '(which-key-mode t)
  '(which-key-side-window-location (quote right)))
 
@@ -485,3 +490,11 @@
 (linum-mode)
 
 (set-background-color "#033f01a90ccc")
+
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/maxima/")
+(autoload 'maxima-mode "maxima" "Maxima mode" t)
+(autoload 'imaxima "imaxima" "Frontend for maxima with Image support" t)
+(autoload 'maxima "maxima" "Maxima interaction" t)
+(autoload 'imath-mode "imath" "Imath mode for math formula input" t)
+(setq imaxima-use-maxima-mode-flag t)
+(add-to-list 'auto-mode-alist '("\\.ma[cx]" . maxima-mode))
