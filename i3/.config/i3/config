@@ -212,3 +212,4 @@ assign [class="Steam"] 9
 bindsym $mod+Delete exec ~/.config/i3/lock.sh
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id feh --bg-scale /home/cr0c0/Bilder/BUG_slides.png

@@ -98,6 +98,7 @@
 (depends-on "ssh-tunnels")
 (depends-on "swiper")
 (depends-on "telega")
+(depends-on "try")
 (depends-on "use-package")
 (depends-on "visual-fill-column")
 (depends-on "websocket")
