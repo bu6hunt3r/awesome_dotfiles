@@ -54,15 +54,6 @@ n() {
 }
 #}}}
 
-<<<<<<< HEAD
-function fkill() {
-     local pid
-     pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
-    
-     if [ "x$pid" != "x" ]; then
-          echo $pid | xargs kill -${1:-9}
-     fi
-=======
 # Kill process
 # Fuzzy process search -> kill the selected process
 #
@@ -73,5 +64,4 @@ function fkill() {
 	if [ "x$pid" != "x" ]; then
 		echo $pid | xargs kill -${1:-9}
 	fi
->>>>>>> 5f46c2280e8789affd8cdcb9f1e44c191150ae5f
 }
