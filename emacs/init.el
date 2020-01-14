@@ -84,7 +84,7 @@
 (set-background-color "#033f01a90ccc")
 
 ;; font settings
-(set-default-font "IBM 3270 Narrow")
+(set-default-font "3270Medium Nerd Font Mono Medium")
 ;; (set-default-font "IBM 3270 Narrow")
 (load-file "~/.emacs.d/font-size.el")
 (require 'font-size)
