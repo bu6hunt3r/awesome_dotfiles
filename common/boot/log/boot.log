@@ -1,0 +1,90 @@
+[1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/guard.zsh][0m readlink command found. continuing
+[1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/functions.zsh][0m Loaded git management functions.
+[1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/symlinks.zsh][0m Sourcing deploy scripts.
+	/home/cr0c0/.bashrc [32mok.[0m
+	/home/cr0c0/.bash_profile [32mok.[0m
+	/home/cr0c0/.tmux.conf [32mok.[0m
+	/home/cr0c0/.tmux.d [32mok.[0m
+[1;33m[INFO][m Cloning tmux plugin manager
+fatal: Zielpfad '/home/cr0c0/.tmux/plugins/tpm' existiert bereits und ist kein leeres Verzeichnis.
+fatal: Zielpfad '/home/cr0c0/.tmux/plugins/tmux-fingers' existiert bereits und ist kein leeres Verzeichnis.
+./vim/deploy.zsh:source:2: datei oder Verzeichnis nicht gefunden: ./install.sh
+	/home/cr0c0/.zshrc [32mok.[0m
+	/home/cr0c0/.zsh.d [32mok.[0m
+	/home/cr0c0/.zshenv [31m-[30mX[0m->[0m /home/cr0c0/.zshenv [32m->[0m /home/cr0c0/awesome_dotfiles/zsh/zshenv.zsh
+[1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/symlinks.zsh][0m Checking/Updated symlinks within /home/cr0c0/dotfiles.
+	/home/cr0c0/.dotfiles [32mok.[0m
+[1;33m[STATUS - /home/cr0c0/awesome_dotfiles/boot/zsh-deps.zsh][0m Creating dir /home/cr0c0/.dotfiles/deps/zsh.
+
+-------------------
+[[32mninrod/zsh-bd[0m] already cloned from [34mhttps://github.com/ninrod/zsh-bd.git[0m
+-------------------
+
+-------------------
+[[32mninrod/k[0m] already cloned from [34mhttps://github.com/ninrod/k.git[0m
+-------------------
+
+-------------------
+[[32mninrod/docker-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/docker-zsh-completion.git[0m
+-------------------
+
+-------------------
+[[32mninrod/docker-compose-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/docker-compose-zsh-completion.git[0m
+-------------------
+
+-------------------
+[[32mzsh-users/zsh-completions[0m] already cloned from [34mhttps://github.com/zsh-users/zsh-completions.git[0m
+-------------------
+
+-------------------
+[[32mninrod/pass-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/pass-zsh-completion.git[0m
+-------------------
+
+-------------------
+[[32mninrod/gradle-zsh-completion[0m] already cloned from [34mhttps://github.com/ninrod/gradle-zsh-completion.git[0m
+-------------------
+
+-------------------
+[[32mzsh-users/zsh-autosuggestions[0m] already cloned from [34mhttps://github.com/zsh-users/zsh-autosuggestions.git[0m
+-------------------
+
+-------------------
+[[32mzsh-users/zsh-syntax-highlighting[0m] already cloned from [34mhttps://github.com/zsh-users/zsh-syntax-highlighting.git[0m
+-------------------
+
+-------------------
+[[32mninrod/gruvbox-theme[0m] already cloned from [34mhttps://github.com/ninrod/gruvbox-theme.git[0m
+-------------------
+
+-------------------
+[[32mninrod/rsynced-melpa[0m] already cloned from [34mhttps://github.com/ninrod/rsynced-melpa.git[0m
+-------------------
+
+-------------------
+[[32mninrod/evil-replace-with-char[0m] already cloned from [34mhttps://github.com/ninrod/evil-replace-with-char.git[0m
+-------------------
+
+-------------------
+[[32mninrod/evil-string-inflection[0m] already cloned from [34mhttps://github.com/ninrod/evil-string-inflection.git[0m
+-------------------
+
+-------------------
+[[32mnoctuid/rect-ext.el[0m] already cloned from [34mhttps://github.com/noctuid/rect-ext.el.git[0m
+-------------------
+
+-------------------
+[[32memacs-evil/evil[0m] already cloned from [34mhttps://github.com/emacs-evil/evil.git[0m
+-------------------
+
+-------------------
+[[32mjaypei/emacs-neotree[0m] already cloned from [34mhttps://github.com/jaypei/emacs-neotree.git[0m
+-------------------
+
+-------------------
+[[32mseebi/dircolors-solarized[0m] already cloned from [34mhttps://github.com/seebi/dircolors-solarized.git[0m
+-------------------
+	/home/cr0c0/.lscolors [32mok.[0m
+
+-------------------
+[[32mMorantron/tmux-fingers[0m] already cloned from [34mhttps://github.com/Morantron/tmux-fingers.git[0m
+-------------------

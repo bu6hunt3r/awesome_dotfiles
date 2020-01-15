@@ -1,0 +1,5 @@
+#+STARTUP: indent
+#+STARTUP: overview
+
+- To set background transparent set
+=hi Normal guibg=NONE ctermbg=NONE= into =~/.vimrc=

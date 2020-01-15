@@ -1,0 +1,17 @@
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;; crux rebinds
+(global-set-key [remap move-beginning-of-line] #'crux-move-beginning-of-line)
+(global-set-key (kbd "C-k") #'crux-smart-kill-line)
+(global-set-key (kbd "C-x C-u") #'crux-upcase-region)
+(global-set-key (kbd "C-S-RET") #'crux-smart-open-line-above)
+(global-set-key (kbd "C-c n") #'crux-cleanup-buffer-or-region)
+(global-set-key (kbd "C-c f") #'crux-recentf-find-file)
+(global-set-key (kbd "C-c u") #'crux-view-url)
+(global-set-key (kbd "C-c e") #'crux-eval-and-replace)
+(global-set-key (kbd "C-c D") #'crux-delete-buffer-and-file)
+(global-set-key (kbd "C-c M-d") #'crux-duplicate-and-comment-current-line-or-region)
+(global-set-key (kbd "C-c k") #'crux-kill-other-buffers)
+(global-set-key (kbd "C-x C-u") #'crux-upcase-region)
+(global-set-key (kbd "C-x C-l") #'crux-downcase-region)
+(global-set-key (kbd "C-x M-c") #'crux-capitalize-region)

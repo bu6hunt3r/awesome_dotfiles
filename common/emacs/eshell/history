@@ -1,0 +1,38 @@
+cd ..
+,,
+..
+..
+..
+mkdir nand2teris
+mv nand2teris/ nand2tetris
+exit
+rm Not.out
+ls
+ls
+exit
+chmod +x /tmp/test.py
+/tmp/test.py
+/tmp/test.py
+exit
+git pull
+q
+exit
+python3 test.py
+q
+python3 test.py
+q
+exit
+mpsyt
+mkdir 04
+exit
+ipython
+pwd
+ls
+ls -la
+chmod +x inc
+exit
+cd ../Dokumente/
+mkdir powerpc_examples
+exit
+mkdir ~/Dokumente/powerpc_examples/echo
+exit
