@@ -1,2 +1,4 @@
 #!/usr/bin/env zsh
-source ./install.sh
+echo "VIM INSTALL"
+source "$GIT_ROOT/common/vim/install.sh"
+

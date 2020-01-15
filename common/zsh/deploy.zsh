@@ -1,8 +1,5 @@
 verifylink ~/.zshrc
-updatelinks ~/.zshrc zsh/main.zsh
+updatelinks ~/.zshrc common/zsh/main.zsh
 
 verifylink ~/.zsh.d
-updatelinks ~/.zsh.d zsh
-
-verifylink ~/.zshenv
-updatelinks ~/.zshenv zsh/zshenv.zsh
+updatelinks ~/.zsh.d common/zsh

@@ -1,5 +1,5 @@
 verifylink ~/.bashrc
-updatelinks ~/.bashrc bash/bashrc.bash
+updatelinks ~/.bashrc common/bash/bashrc.bash
 
 verifylink ~/.bash_profile
-updatelinks ~/.bash_profile bash/bash_profile.bash
+updatelinks ~/.bash_profile common/bash/bash_profile.bash

@@ -6,7 +6,7 @@ GIT_ROOT=$(git rev-parse --show-toplevel)
 
 printf "\e[1;33m%s\e[m %s\n" "[INFO]" "Chdir into $PWD"
 
-logdir=$GIT_ROOT/boot/log
+logdir=$GIT_ROOT/common/boot/log
 mkdir -p $logdir
 
 logfile=$logdir/boot.log

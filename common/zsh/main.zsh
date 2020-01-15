@@ -53,7 +53,7 @@ fi
 lsd_installed=$(which lsd &>/dev/null)
 if [[ -z $lsd_installed ]]; then
 		lsd_prompt="\033[1;32m- [√] lsd installed...\033[0m"
-		source "$HOME/.config/zsh/.lsd_aliases"
+		source "$HOME/.zsh.d/.config/zsh/.lsd_aliases"
 else
 		lsd_prompt="\033[1;31m- [ ] lsd not installed...(also check for patched font -> https://github.com/ryanoasis/nerd-fonts/blob/master/readme.md)\033[0m"
 fi
