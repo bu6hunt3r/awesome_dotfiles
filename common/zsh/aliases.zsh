@@ -1,5 +1,8 @@
 # ls
 alias ls='ls --color=auto --group-directories-first -X'
+#preexec() {
+#  (mpg123 ~/Musik/cmd.mp3 &> /dev/null & sleep 0.4)
+#}
 alias l='ls -lh'
 alias la='l -A'
 

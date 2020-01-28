@@ -79,3 +79,4 @@ bind-key - set status
 
 # reload tmux config
 #bind -n F8 source ~/.tmux.conf
+
