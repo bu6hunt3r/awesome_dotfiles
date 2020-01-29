@@ -8,6 +8,9 @@ alias c='clear'
 alias q='exit'
 alias b='builtin cd ..'
 
+# xclip alias
+alias x="xclip -selection clipboard"
+
 alias w='echo -e "$Blue ${"$(pwd)"/$HOME/~} ${Red}at ${Cyan}$(whoami)${Red}@${Yellow}$(hostname -s)$Red \
 using $Yellow${0}$Purple ${DOT_PROMPT_CHAR:-$}${Rst}"'
 
