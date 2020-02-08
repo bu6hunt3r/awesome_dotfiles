@@ -30,14 +30,14 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -53,10 +53,10 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # bindsym $mod+d exec rofi -lines 8 -show run -theme lb -font "IBM 3270 14"
-bindsym $mod+d exec rofi -lines 8 -show run -theme lb -font "Zero Threes Regular 14"
-bindsym $mod+Shift+w exec rofi -lines 8 -show window -theme lb -font "Zero Threes Regular 14"
+#bindsym $mod+d exec rofi -lines 8 -show run -theme lb -font "Zero Threes Regular 14"
+#bindsym $mod+Shift+w exec rofi -lines 8 -show window -theme lb -font "Zero Threes Regular 14"
 
 # change focus
 bindsym $mod+h focus left
@@ -187,9 +187,23 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3status
-#}
+bar {
+        status_command i3status
+        position          top
+        mode              hide
+        workspace_buttons yes
+        tray_output       none
+
+        font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+        colors {
+	        background #000000
+                statusline #ffffff
+                focused_workspace  #ffffff #285577
+                active_workspace   #ffffff #333333
+                inactive_workspace #888888 #222222
+                urgent_workspace   #ffffff #900000
+	}
+}
 
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
@@ -211,5 +225,5 @@ assign [class="Steam"] 9
 
 bindsym $mod+Delete exec ~/.config/i3/lock.sh
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id feh --bg-scale $HOME/Bilder/xenomorph.jpg
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec --no-startup-id feh --bg-scale $HOME/Bilder/xenomorph.jpg
