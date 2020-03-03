@@ -24,3 +24,4 @@ $wiki=#!pipe python /home/cr0c0/git-repos/r2wiki/r2wiki.py
 
 $wiki=#!pipe python /home/cr0c0/.config/radare2/r2pm/git/r2wiki/r2wiki.py
 $wiki=#!pipe python /home/cr0c0/.local/share/radare2/r2pm/git/r2wiki/r2wiki.py
+$wiki=#!pipe python /home/cr0c0/.local/share/radare2/r2pm/git/r2wiki/r2wiki.py
