@@ -57,8 +57,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
-modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth temperature date
+modules-center = player-mpris-simple
+modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth temperature date info-eyestrain
 
 tray-position = right
 tray-padding = 2
@@ -228,6 +228,11 @@ icon-next = 
 
 label-song-maxlen = 25
 label-song-ellipsis = true
+
+[module/info-eyestrain]
+type = custom/scrtipt
+exec = /home/cr0c0/awesome_dotfiles/company/polybar/.config/polybar/scripts/info-eyestrain.sh
+interval = 60
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -427,6 +432,14 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
+
+[module/player-mpris-simple]
+type = custom/script
+exec = /home/cr0c0/awesome_dotfiles/company/polybar/.config/polybar/scripts/player-mpris.sh
+interval = 3
+click-left = playerctl previous &
+click-right = playerctl next &
+click-middle = playerctl play-pause &
 
 [module/powermenu]
 type = custom/menu
