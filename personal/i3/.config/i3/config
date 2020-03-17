@@ -209,6 +209,9 @@ for_window [class="eu4" instance="eu4"] floating enable, border none, gaps inner
 # Always put steam on workspace 9
 assign [class="Steam"] 9
 
+# Always put vlc on workspace 3
+assign [class="vlc"] 3
+
 bindsym $mod+Delete exec ~/.config/i3/lock.sh
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
