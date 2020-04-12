@@ -75,7 +75,7 @@ bind-key - set status
 
 # renames tmux window
 # more info here: http://unix.stackexchange.com/a/269542/155613
-#bind -n F7 command-prompt "rename-window '%%'"
+bind -n F7 command-prompt "rename-window '%%'"
 
 # reload tmux config
 #bind -n F8 source ~/.tmux.conf
